@@ -1,672 +1,371 @@
+<link rel="stylesheet" href="Learner/assets/vendor/bootstrap-icons/bootstrap-icons.css">
 <style>
-.sanskar-pro-header {
-    --saffron-900: #6f2e00;
-    --saffron-800: #8b3d00;
-    --saffron-700: #a94b00;
-    --saffron-600: #c96300;
-    --saffron-500: #e27b00;
-    --saffron-400: #f39c12;
-    --saffron-300: #ffc454;
-    --saffron-200: #ffe6b0;
-    --saffron-100: #fff4df;
-    --saffron-050: #fff9ee;
-    --text-900: #4a2500;
-    --text-700: #734100;
-    position: relative;
-    z-index: 996;
+.learner-main-header {
+  --background-color: #ff6a00;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --accent-color: #ffd400;
+  --nav-color: rgba(255, 255, 255, 0.86);
+  --nav-hover-color: #ffd400;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #2a2a2a;
+  --nav-dropdown-hover-color: #ff6a00;
+
+  color: var(--default-color);
+  background: linear-gradient(90deg, #ff6a00, #ff8c00);
+  padding: 14px 0;
+  transition: all 0.45s ease;
+  z-index: 997;
 }
 
-.sanskar-pro-header .bd-header-transparent-two {
-    position: relative;
+.learner-main-header .logo {
+  line-height: 1;
+  gap: 10px;
 }
 
-.sanskar-pro-header .bd-header-transparent-two::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(120% 90% at 8% 0%, rgba(255, 196, 84, 0.35) 0%, rgba(255, 196, 84, 0) 56%),
-                radial-gradient(120% 90% at 95% 10%, rgba(227, 123, 0, 0.28) 0%, rgba(227, 123, 0, 0) 58%);
-    pointer-events: none;
-    animation: sanskar-header-glow 13s ease-in-out infinite;
+.learner-main-header .logo img {
+  max-height: 36px;
+  width: auto;
 }
 
-.sanskar-pro-header .bd-header-top.style-three {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    padding: 10px clamp(16px, 3vw, 42px);
-    border-bottom: 1px solid rgba(255, 214, 151, 0.5);
-    background: linear-gradient(96deg, var(--saffron-800) 0%, var(--saffron-700) 46%, var(--saffron-500) 100%);
+.learner-main-header .logo .sitename {
+  margin: 0;
+  color: var(--heading-color);
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  line-height: 1;
 }
 
-.sanskar-pro-header .bd-header-top ul {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.learner-main-header .btn-getstarted,
+.learner-main-header .btn-getstarted:focus {
+  color: #1a1a1a;
+  background: linear-gradient(45deg, #ffd400, #ffb100);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 24px;
+  margin: 0 0 0 28px;
+  border-radius: 50px;
+  transition: 0.3s ease;
+  border: none;
+  white-space: nowrap;
+}
+
+.learner-main-header .btn-getstarted:hover,
+.learner-main-header .btn-getstarted:focus:hover {
+  color: #ffffff;
+  background: linear-gradient(45deg, #ff6a00, #ffd400);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 106, 0, 0.4);
+}
+
+body.scrolled .learner-main-header {
+  box-shadow: 0 8px 25px rgba(255, 106, 0, 0.3);
+}
+
+@media (min-width: 1200px) {
+  .learner-main-header .navmenu {
+    padding: 0;
+  }
+
+  .learner-main-header .navmenu ul {
     margin: 0;
     padding: 0;
+    display: flex;
     list-style: none;
-}
-
-.sanskar-pro-header .bd-header-top li {
-    margin: 0;
-}
-
-.sanskar-pro-header .bd-header-top a {
-    display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: #fff6e5;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    transition: color 0.25s ease;
-}
+  }
 
-.sanskar-pro-header .bd-header-top a span {
-    color: #ffe98f;
-}
+  .learner-main-header .navmenu li {
+    position: relative;
+  }
 
-.sanskar-pro-header .bd-header-top a:hover {
-    color: #fffef9;
-}
+  .learner-main-header .navmenu > ul > li {
+    white-space: nowrap;
+    padding: 15px 14px;
+  }
 
-.sanskar-pro-header .sanskar-header-shell {
-    margin: 0 clamp(8px, 2.4vw, 30px);
-    border: 1px solid rgba(201, 99, 0, 0.3);
-    border-radius: 0 0 18px 18px;
-    background: rgba(255, 250, 241, 0.96);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 14px 34px rgba(117, 58, 0, 0.18);
-    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
-}
+  .learner-main-header .navmenu > ul > li:last-child {
+    padding-right: 0;
+  }
 
-.sanskar-pro-header .sanskar-header-shell.bd-sticky {
-    background: rgba(255, 248, 236, 0.98);
-    box-shadow: 0 18px 38px rgba(107, 49, 0, 0.24);
-}
-
-.sanskar-pro-header .bd-header-inner {
-    min-height: 92px;
-    padding-inline: clamp(14px, 2vw, 24px);
-}
-
-.sanskar-pro-header .bd-header-logo img {
-    max-height: 56px;
-    transition: transform 0.3s ease;
-}
-
-.sanskar-pro-header .bd-header-logo a:hover img {
-    transform: scale(1.04);
-}
-
-.sanskar-pro-header .sanskar-main-nav > ul {
+  .learner-main-header .navmenu a,
+  .learner-main-header .navmenu a:focus {
+    color: var(--nav-color);
+    font-size: 15px;
+    padding: 0 2px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
     display: flex;
     align-items: center;
-    gap: 4px;
-    margin: 0;
-    padding: 5px;
-    list-style: none;
-    border: 1px solid rgba(201, 99, 0, 0.3);
-    border-radius: 999px;
-    background: linear-gradient(180deg, #fffdf8 0%, #fff5e8 100%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.88);
-}
-
-.sanskar-pro-header .sanskar-main-nav > ul > li {
-    position: relative;
-    margin: 0;
-}
-
-.sanskar-pro-header .sanskar-main-nav > ul > li > a {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    height: 52px;
-    color: var(--text-900);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    padding: 0 14px;
-    border-radius: 999px;
+    justify-content: space-between;
     white-space: nowrap;
-    transition: color 0.28s ease, background-color 0.28s ease;
-}
-
-.sanskar-pro-header .sanskar-main-nav > ul > li > a::after {
-    content: "";
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    bottom: 10px;
-    height: 2px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--saffron-500), var(--saffron-300));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.28s ease;
-}
-
-.sanskar-pro-header .sanskar-main-nav > ul > li > a .sanskar-nav-caret {
-    display: inline-flex;
-    align-items: center;
-    font-size: 12px;
-    color: #955100;
-    transition: transform 0.26s ease, color 0.26s ease;
-}
-
-.sanskar-pro-header .sanskar-main-nav > ul > li:hover > a .sanskar-nav-caret {
-    transform: rotate(180deg);
-    color: var(--saffron-700);
-}
-
-.sanskar-pro-header .sanskar-main-nav > ul > li > a:hover,
-.sanskar-pro-header .sanskar-main-nav > ul > li > a.active {
-    color: var(--saffron-700);
-    background: rgba(255, 219, 159, 0.45);
-}
-
-.sanskar-pro-header .sanskar-main-nav > ul > li > a:hover::after,
-.sanskar-pro-header .sanskar-main-nav > ul > li > a.active::after {
-    transform: scaleX(1);
-}
-
-.sanskar-pro-header .sanskar-main-nav .submenu {
-    display: block;
-    min-width: 248px;
-    padding: 10px 10px 8px;
-    border-radius: 14px;
-    border: 1px solid rgba(201, 99, 0, 0.26);
-    background: linear-gradient(180deg, #fffdf8 0%, #fff3e1 100%);
-    box-shadow: 0 18px 36px rgba(108, 52, 0, 0.2);
-    top: calc(100% + 12px);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(14px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-}
-
-.sanskar-pro-header .sanskar-main-nav ul li:hover > .submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.sanskar-pro-header .sanskar-main-nav ul li:focus-within > .submenu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.sanskar-pro-header .sanskar-main-nav .submenu li {
-    margin: 0;
-}
-
-.sanskar-pro-header .sanskar-main-nav .submenu > li > a {
-    display: block;
-    margin-bottom: 4px;
-    padding: 10px 11px;
-    border-radius: 10px;
-    color: var(--text-900);
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.4;
-    transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
-}
-
-.sanskar-pro-header .sanskar-main-nav .submenu > li:last-child > a {
-    margin-bottom: 0;
-}
-
-.sanskar-pro-header .sanskar-main-nav .submenu > li > a:hover {
-    color: var(--saffron-700);
-    background: rgba(255, 204, 121, 0.28);
-    transform: translateX(3px);
-}
-
-.sanskar-pro-header .sanskar-programs-submenu {
-    min-width: 360px;
-    padding: 12px;
-}
-
-.sanskar-pro-header .sanskar-programs-submenu .sanskar-mega-group {
-    margin-bottom: 10px;
-    padding: 12px 14px;
-    border-radius: 12px;
-    border: 1px solid rgba(201, 99, 0, 0.2);
-    background: var(--saffron-050);
-}
-
-.sanskar-pro-header .sanskar-programs-submenu .sanskar-mega-group:last-child {
-    margin-bottom: 0;
-}
-
-.sanskar-pro-header .sanskar-mega-title {
-    display: block;
-    margin-bottom: 8px;
-    color: var(--saffron-800);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.sanskar-pro-header .sanskar-programs-submenu .sanskar-mega-group a {
+    transition: 0.3s;
     position: relative;
-    display: block;
-    margin-bottom: 4px;
-    padding: 6px 0 6px 16px;
-    color: var(--text-700);
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.22s ease, transform 0.22s ease;
-}
+  }
 
-.sanskar-pro-header .sanskar-programs-submenu .sanskar-mega-group a:last-child {
-    margin-bottom: 0;
-}
+  .learner-main-header .navmenu a i,
+  .learner-main-header .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
 
-.sanskar-pro-header .sanskar-programs-submenu .sanskar-mega-group a::before {
+  .learner-main-header .navmenu > ul > li > a:before {
     content: "";
     position: absolute;
+    height: 2px;
+    bottom: -6px;
     left: 0;
-    top: 12px;
-    width: 6px;
-    height: 6px;
-    border-radius: 999px;
-    background: var(--saffron-600);
-}
+    background-color: var(--nav-hover-color);
+    visibility: hidden;
+    width: 0;
+    transition: all 0.3s ease-in-out;
+  }
 
-.sanskar-pro-header .sanskar-programs-submenu .sanskar-mega-group a:hover {
-    color: var(--saffron-700);
-    transform: translateX(2px);
-}
+  .learner-main-header .navmenu a:hover:before,
+  .learner-main-header .navmenu li:hover > a:before,
+  .learner-main-header .navmenu .active:before {
+    visibility: visible;
+    width: 100%;
+  }
 
-.sanskar-pro-header .sanskar-header-actions {
-    margin-left: 16px;
-}
+  .learner-main-header .navmenu li:hover > a,
+  .learner-main-header .navmenu .active,
+  .learner-main-header .navmenu .active:focus {
+    color: var(--nav-hover-color);
+  }
 
-.sanskar-pro-header .sanskar-apply-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 44px;
-    padding: 0 22px;
-    border-radius: 999px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    background: linear-gradient(118deg, var(--saffron-600), var(--saffron-300));
-    box-shadow: 0 10px 20px rgba(201, 99, 0, 0.3);
-    transition: transform 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease;
-}
-
-.sanskar-pro-header .sanskar-apply-btn:hover {
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 14px 24px rgba(201, 99, 0, 0.36);
-    filter: brightness(1.02);
-}
-
-.sanskar-pro-header .bd-header-hamburger .bar-icon {
-    width: 44px;
-    height: 44px;
-    padding: 0 11px;
-    border-radius: 12px;
-    border: 1px solid rgba(201, 99, 0, 0.24);
-    background: linear-gradient(180deg, #fffdf7 0%, #fff2df 100%);
-    box-shadow: 0 8px 16px rgba(131, 61, 0, 0.12);
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    transition: border-color 0.24s ease, box-shadow 0.24s ease, transform 0.24s ease;
-}
-
-.sanskar-pro-header .bd-header-hamburger .bar-icon span {
+  .learner-main-header .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
     display: block;
-    height: 2px;
-    border-radius: 999px;
-    background: #8c4500;
-    transition: transform 0.24s ease;
-}
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 8px;
+    z-index: 99;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.12);
+  }
 
-.sanskar-pro-header .bd-header-hamburger .bar-icon:hover {
-    border-color: rgba(201, 99, 0, 0.45);
-    box-shadow: 0 10px 20px rgba(125, 57, 0, 0.22);
-    transform: translateY(-1px);
-}
+  .learner-main-header .navmenu .dropdown ul li {
+    min-width: 220px;
+    padding: 0;
+  }
 
-.sanskar-pro-header .bd-header-hamburger .bar-icon:hover span:first-child {
-    transform: translateX(2px);
-}
+  .learner-main-header .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
 
-.sanskar-pro-header .bd-header-hamburger .bar-icon:hover span:last-child {
-    transform: translateX(-2px);
-}
+  .learner-main-header .navmenu .dropdown ul a:hover,
+  .learner-main-header .navmenu .dropdown ul .active,
+  .learner-main-header .navmenu .dropdown ul li:hover > a {
+    color: var(--nav-dropdown-hover-color);
+  }
 
-.sanskar-pro-header .bd-offcanvas-about p {
-    line-height: 1.75;
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-area {
-    background: linear-gradient(180deg, #fff8ee 0%, #ffeccc 100%);
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-content {
-    color: var(--text-900);
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-close-icon {
-    border: 1px solid rgba(201, 99, 0, 0.3);
-    background: #fff6e7;
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-search form input {
-    border: 1px solid rgba(201, 99, 0, 0.28);
-    background: #fffdf8;
-    color: var(--text-900);
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-search form input::placeholder {
-    color: #9f6b2e;
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-search form button {
-    color: var(--saffron-700);
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-menu nav > ul > li {
-    position: relative;
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-menu nav > ul > li > a {
-    color: var(--text-900);
-    font-weight: 600;
-    border-bottom: 1px solid rgba(201, 99, 0, 0.16);
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-menu nav > ul > li.active > a,
-.sanskar-header-offcanvas .bd-offcanvas-menu nav > ul > li > a:hover {
-    color: var(--saffron-700);
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-menu nav .submenu {
-    background: #fff5e3;
-    border-radius: 12px;
-    margin-top: 8px;
-    padding: 8px 10px;
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-menu nav .submenu li a {
-    color: #6e3900;
-    font-size: 14px;
-}
-
-.sanskar-header-offcanvas .bd-offcanvas-menu nav .submenu li a:hover {
-    color: var(--saffron-700);
-}
-
-.sanskar-header-offcanvas .bd-menu-close {
-    border: 1px solid rgba(201, 99, 0, 0.28);
-    background: #fff3dc;
-    color: var(--saffron-700);
-}
-
-.bd-offcanvas-overlay {
-    background: rgba(77, 34, 0, 0.45);
-}
-
-@keyframes sanskar-header-glow {
-    0% {
-        opacity: 0.75;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.03);
-    }
-    100% {
-        opacity: 0.8;
-        transform: scale(1);
-    }
-}
-
-@media (max-width: 1399px) {
-    .sanskar-pro-header .sanskar-header-shell {
-        margin-inline: 12px;
-    }
-
-    .sanskar-pro-header .sanskar-main-nav > ul > li > a {
-        padding-inline: 12px;
-        font-size: 13.5px;
-    }
+  .learner-main-header .navmenu .dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
 }
 
 @media (max-width: 1199px) {
-    .sanskar-pro-header .bd-header-top.style-three {
-        display: none;
-    }
+  .learner-main-header .logo {
+    order: 1;
+  }
 
-    .sanskar-pro-header .bd-header-inner {
-        min-height: 82px;
-    }
+  .learner-main-header .btn-getstarted {
+    order: 2;
+    margin: 0 14px 0 0;
+    padding: 7px 14px;
+  }
 
-    .sanskar-pro-header .bd-header-logo img {
-        max-height: 50px;
-    }
+  .learner-main-header .navmenu {
+    order: 3;
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .learner-main-header .mobile-nav-toggle {
+    color: var(--nav-color);
+    font-size: 28px;
+    line-height: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .learner-main-header .navmenu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 10px;
+    background-color: var(--nav-mobile-background-color);
+    border: 1px solid rgba(42, 42, 42, 0.1);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+  }
+
+  .learner-main-header .navmenu a,
+  .learner-main-header .navmenu a:focus {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .learner-main-header .navmenu a i,
+  .learner-main-header .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: rgba(255, 106, 0, 0.1);
+  }
+
+  .learner-main-header .navmenu a:hover,
+  .learner-main-header .navmenu .active,
+  .learner-main-header .navmenu .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .learner-main-header .navmenu .active i,
+  .learner-main-header .navmenu .active:focus i {
+    background-color: var(--background-color);
+    color: #fff;
+    transform: rotate(180deg);
+  }
+
+  .learner-main-header .navmenu .dropdown ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: #fff8ef;
+    border-radius: 8px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .learner-main-header .navmenu .dropdown > .dropdown-active {
+    display: block;
+  }
+
+  body.mobile-nav-active {
+    overflow: hidden;
+  }
+
+  body.mobile-nav-active .learner-main-header .mobile-nav-toggle {
+    color: #fff;
+    position: fixed;
+    font-size: 32px;
+    top: 18px;
+    right: 16px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+
+  body.mobile-nav-active .learner-main-header .navmenu {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    background: rgba(33, 37, 41, 0.82);
+    transition: 0.3s;
+  }
+
+  body.mobile-nav-active .learner-main-header .navmenu > ul {
+    display: block;
+  }
 }
 
-@media (max-width: 1450px) {
-    .sanskar-pro-header .sanskar-header-actions {
-        display: none !important;
-    }
-}
+@media (max-width: 768px) {
+  .learner-main-header .logo .sitename {
+    font-size: 24px;
+  }
 
-@media (max-width: 767px) {
-    .sanskar-pro-header .sanskar-header-shell {
-        margin-inline: 0;
-        border-radius: 0 0 14px 14px;
-    }
-
-    .sanskar-pro-header .bd-header-inner {
-        padding-inline: 14px;
-    }
-
-    .sanskar-header-offcanvas .bd-offcanvas-content {
-        padding: 24px 20px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .sanskar-pro-header * {
-        animation: none !important;
-        transition: none !important;
-    }
+  .learner-main-header .btn-getstarted {
+    display: none;
+  }
 }
 </style>
 
-<!-- Header area start -->
-<header class="sanskar-pro-header">
-    <div class="bd-header-transparent-two">
-        <div class="bd-header-top style-three">
-            <div class="bd-header-top-left">
-                <ul>
-                    <li>
-                        <a href="tel:+18884467880">
-                            <span><i class="fa-solid fa-phone-volume"></i></span>
-                            (888) 446-7880
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:admissions@sanskar.com">
-                            <span><i class="fa-sharp fa-light fa-envelope"></i></span>
-                            admissions@sanskar.com
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="bd-header-top-right text-md-end">
-                <a href="contact.html">
-                    <span><i class="fa-sharp fa-regular fa-location-dot"></i></span>
-                    Brooklyn, NY 12207, New York
-                </a>
-            </div>
-        </div>
-        <div class="bd-header-area header-style-one sanskar-header-shell" id="header-sticky">
-            <div class="bd-header-inner">
-                <div class="bd-header-left">
-                    <div class="bd-header-logo">
-                        <a href="index.html" aria-label="Sanskar home">
-                            <img src="assets/images/logo/logo.svg" alt="Sanskar logo">
-                        </a>
-                    </div>
-                </div>
-                <div class="bd-header-right">
-                    <div class="bd-header-menu">
-                        <nav class="main-menu bd-mobile-menu-active d-none d-xl-block sanskar-main-nav">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="javascript:void(0)">About Us <span class="sanskar-nav-caret"><i class="fa-light fa-angle-down"></i></span></a>
-                                    <ul class="submenu">
-                                        <li><a href="aboutus.html">About Sanskar</a></li>
-                                        <li><a href="features.html">Key Features</a></li>
-                                        <li><a href="principal.html">Principal's Desk</a></li>
-                                        <li><a href="director.html">Director's Desk</a></li>
-                                        <li><a href="house.html">House System</a></li>
-                                        <li><a href="#">MPD</a></li>
-                                        <li><a href="#">CBSE Oasis Documents</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="javascript:void(0)">Our Programs <span class="sanskar-nav-caret"><i class="fa-light fa-angle-down"></i></span></a>
-                                    <ul class="submenu sanskar-programs-submenu">
-                                        <li class="sanskar-mega-group">
-                                            <span class="sanskar-mega-title">Academics</span>
-                                            <a href="circulum.html">Curriculum</a>
-                                        </li>
-                                        <li class="sanskar-mega-group">
-                                            <span class="sanskar-mega-title">Development</span>
-                                            <a href="cocir.html">Co-Curricular Activities</a>
-                                            <a href="sports.html">Strength & Sportsmanship</a>
-                                        </li>
-                                        <li class="sanskar-mega-group">
-                                            <span class="sanskar-mega-title">Community Programs</span>
-                                            <a href="teacher.html">Teacher Training</a>
-                                            <a href="events.html">Upcoming Events</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children">
-                                    <a href="javascript:void(0)">Admissions <span class="sanskar-nav-caret"><i class="fa-light fa-angle-down"></i></span></a>
-                                    <ul class="submenu">
-                                        <li><a href="admission.html">Admission Process</a></li>
-                                        <li><a href="form.html">Application Form</a></li>
-                                        <li><a href="document.html">Document Checklist</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="carrier.html">Careers</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="sanskar-header-actions d-none d-xl-flex">
-                        <a class="sanskar-apply-btn" href="admission.html">Apply Now</a>
-                    </div>
-                    <div class="bd-header-hamburger">
-                        <div class="sidebar-toggle">
-                            <a class="bar-icon" href="javascript:void(0)" aria-label="Open mobile menu">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!-- Header area end -->
+<header class="header learner-main-header d-flex align-items-center sticky-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <img src="assets/images/logo/logo.svg" alt="Sanskar logo">
+      <span class="sitename">Sanskar</span>
+    </a>
 
-<!-- Offcanvas area start -->
-<div class="fix sanskar-header-offcanvas">
-    <div class="bd-offcanvas-area">
-        <div class="bd-offcanvas-wrapper">
-            <div class="bd-offcanvas-content">
-                <div class="bd-offcanvas-top d-flex justify-content-between align-items-center mb-30">
-                    <div class="bd-offcanvas-logo">
-                        <a href="index.html">
-                            <img src="assets/images/logo/logo.svg" alt="Sanskar logo">
-                        </a>
-                    </div>
-                    <div class="bd-offcanvas-close">
-                        <button class="bd-offcanvas-close-icon animation--flip">
-                            <span class="bd-offcanvas-m-lines">
-                                <span class="bd-offcanvas-m-line line--1"></span>
-                                <span class="bd-offcanvas-m-line line--2"></span>
-                                <span class="bd-offcanvas-m-line line--3"></span>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-                <div class="bd-offcanvas-search mb-30">
-                    <form action="#">
-                        <input type="text" name="bd-offcanvasSearch" placeholder="Search here">
-                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </form>
-                </div>
-                <div class="bd-mobile-menu-smaller">
-                    <div class="bd-offcanvas-menu mb-30">
-                        <nav></nav>
-                    </div>
-                </div>
-                <div class="bd-offcanvas-about d-none d-lg-block mb-30">
-                    <h4 class="bd-offcanvas-title-meta">About Sanskar</h4>
-                    <p>
-                        We blend strong academics, values, and future-focused skills to help every learner grow with confidence.
-                        Our approach supports both scholastic achievement and holistic development.
-                    </p>
-                </div>
-                <div class="bd-offcanvas-contact mb-30">
-                    <h4 class="bd-offcanvas-title-meta">Contact Info</h4>
-                    <ul>
-                        <li class="d-flex align-items-center gap-10">
-                            <div class="bd-offcanvas-contact-icon">
-                                <a href="contact.html"><i class="fal fa-map-marker-alt"></i></a>
-                            </div>
-                            <div class="bd-offcanvas-contact-text">
-                                <a href="contact.html">Brooklyn, NY 12207, New York</a>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-center gap-10">
-                            <div class="bd-offcanvas-contact-icon">
-                                <a href="tel:+18884467880"><i class="far fa-phone"></i></a>
-                            </div>
-                            <div class="bd-offcanvas-contact-text">
-                                <a href="tel:+18884467880">(888) 446-7880</a>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-center gap-10">
-                            <div class="bd-offcanvas-contact-icon">
-                                <a href="mailto:admissions@sanskar.com"><i class="fal fa-envelope"></i></a>
-                            </div>
-                            <div class="bd-offcanvas-contact-text">
-                                <a href="mailto:admissions@sanskar.com">admissions@sanskar.com</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bd-offcanvas-overlay"></div>
-<div class="bd-offcanvas-overlay-white"></div>
-<!-- Offcanvas area start -->
+    <nav id="learner-navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li class="dropdown">
+          <a href="#"><span>About Us</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="aboutus.html">About Sanskar</a></li>
+            <li><a href="features.html">Key Features</a></li>
+            <li><a href="principal.html">Principal's Desk</a></li>
+            <li><a href="director.html">Director's Desk</a></li>
+            <li><a href="house.html">House System</a></li>
+            <li><a href="#">MPD</a></li>
+            <li><a href="#">CBSE Oasis Documents</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"><span>Our Programs</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="circulum.html">Curriculum</a></li>
+            <li><a href="cocir.html">Co-Curricular Activities</a></li>
+            <li><a href="sports.html">Strength & Sportsmanship</a></li>
+            <li><a href="teacher.html">Teacher Training</a></li>
+            <li><a href="events.html">Upcoming Events</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#"><span>Admissions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="admission.html">Admission Process</a></li>
+            <li><a href="form.html">Application Form</a></li>
+            <li><a href="document.html">Document Checklist</a></li>
+          </ul>
+        </li>
+
+        <li><a href="carrier.html">Careers</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <a class="btn-getstarted" href="admission.html">Apply Now</a>
+  </div>
+</header>

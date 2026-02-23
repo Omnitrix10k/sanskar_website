@@ -1,527 +1,202 @@
 <style>
-.sanskar-pro-footer {
-    --sanskar-footer-accent: #f39c12;
-    --sanskar-footer-accent-deep: #d27000;
-    --sanskar-footer-accent-soft: #ffd063;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(138deg, #5f2800 0%, #8f3f00 44%, #bf5a00 100%);
-    color: #ffe7c2;
+.learner-main-footer {
+  --background-color: #ff6a00;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --accent-color: #ffd400;
+
+  color: var(--default-color);
+  background: linear-gradient(135deg, #ff6a00 0%, #ff8c00 100%);
+  font-size: 14px;
+  padding-bottom: 32px;
+  position: relative;
 }
 
-.sanskar-pro-footer::before,
-.sanskar-pro-footer::after {
-    content: "";
-    position: absolute;
-    border-radius: 999px;
-    pointer-events: none;
+.learner-main-footer .footer-top {
+  padding-top: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
 
-.sanskar-pro-footer::before {
-    width: 380px;
-    height: 380px;
-    top: -220px;
-    left: -140px;
-    background: radial-gradient(circle, rgba(255, 208, 99, 0.36) 0%, rgba(255, 208, 99, 0) 70%);
-    animation: sanskar-footer-float 10s ease-in-out infinite;
+.learner-main-footer .footer-about .logo {
+  line-height: 1;
+  margin-bottom: 22px;
+  gap: 10px;
 }
 
-.sanskar-pro-footer::after {
-    width: 420px;
-    height: 420px;
-    bottom: -280px;
-    right: -140px;
-    background: radial-gradient(circle, rgba(255, 140, 0, 0.28) 0%, rgba(255, 140, 0, 0) 70%);
-    animation: sanskar-footer-float 12s ease-in-out infinite reverse;
+.learner-main-footer .footer-about .logo img {
+  max-height: 40px;
+  width: auto;
 }
 
-.sanskar-pro-footer .bd-footer-area {
-    position: relative;
-    z-index: 2;
-    padding: 84px 0 52px;
-    background: transparent;
+.learner-main-footer .footer-about .logo .sitename {
+  color: var(--heading-color);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "Raleway", sans-serif;
 }
 
-.sanskar-pro-footer .sanskar-footer-highlight {
-    margin-bottom: 38px;
-    padding: 20px 24px;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 231, 194, 0.34);
-    background: rgba(255, 244, 225, 0.12);
-    backdrop-filter: blur(6px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-    animation: sanskar-footer-rise 0.8s both;
+.learner-main-footer .footer-about p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
 }
 
-.sanskar-pro-footer .sanskar-footer-kicker {
-    display: block;
-    margin-bottom: 6px;
-    color: #ffe9c6;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+.learner-main-footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-right: 10px;
+  transition: 0.3s;
 }
 
-.sanskar-pro-footer .sanskar-footer-highlight h5 {
-    margin: 0;
-    color: #ffffff;
-    font-size: clamp(20px, 2.2vw, 28px);
-    line-height: 1.25;
+.learner-main-footer .social-links a:hover {
+  color: #1f1f1f;
+  border-color: var(--accent-color);
+  background: var(--accent-color);
 }
 
-.sanskar-pro-footer .sanskar-footer-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    padding: 0 20px;
-    border-radius: 999px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-    white-space: nowrap;
-    background: linear-gradient(120deg, var(--sanskar-footer-accent-deep), var(--sanskar-footer-accent-soft));
-    box-shadow: 0 12px 24px rgba(147, 67, 0, 0.35);
-    transition: transform 0.24s ease, box-shadow 0.24s ease;
+.learner-main-footer h4 {
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 12px;
+  color: #fff;
 }
 
-.sanskar-pro-footer .sanskar-footer-cta:hover {
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 16px 26px rgba(125, 54, 0, 0.4);
+.learner-main-footer .footer-links {
+  margin-bottom: 30px;
 }
 
-.sanskar-pro-footer .sanskar-footer-widget {
-    animation: sanskar-footer-rise 0.85s both;
+.learner-main-footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.sanskar-pro-footer .sanskar-delay-1 {
-    animation-delay: 0.08s;
+.learner-main-footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.sanskar-pro-footer .sanskar-delay-2 {
-    animation-delay: 0.14s;
+.learner-main-footer .footer-links ul li:first-child {
+  padding-top: 0;
 }
 
-.sanskar-pro-footer .sanskar-delay-3 {
-    animation-delay: 0.2s;
+.learner-main-footer .footer-links ul i {
+  padding-right: 2px;
+  font-size: 12px;
+  line-height: 0;
 }
 
-.sanskar-pro-footer .sanskar-delay-4 {
-    animation-delay: 0.26s;
+.learner-main-footer .footer-links ul a {
+  color: rgba(255, 255, 255, 0.88);
+  display: inline-block;
+  line-height: 1;
 }
 
-.sanskar-pro-footer .sanskar-delay-5 {
-    animation-delay: 0.32s;
+.learner-main-footer .footer-links ul a:hover {
+  color: var(--accent-color);
 }
 
-.sanskar-pro-footer .bd-footer-widget-logo img {
-    max-height: 58px;
+.learner-main-footer .footer-contact p {
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.sanskar-pro-footer .bd-footer-widget-description {
-    margin-top: 16px;
-    margin-bottom: 0;
-    color: #ffe3bc;
-    font-size: 15px;
-    line-height: 1.8;
+.learner-main-footer .copyright {
+  margin-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.sanskar-pro-footer .social-icon-list {
-    margin-top: 22px;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.learner-main-footer .copyright p {
+  margin-bottom: 0;
+  color: #fff;
 }
 
-.sanskar-pro-footer .social-icon-list li {
-    margin: 0;
+.learner-main-footer .copyright-links {
+  margin-top: 8px;
+  font-size: 13px;
 }
 
-.sanskar-pro-footer .social-icon-list li a {
-    width: 38px;
-    height: 38px;
-    border-radius: 999px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    border: 1px solid rgba(255, 235, 204, 0.28);
-    background: rgba(255, 243, 225, 0.12);
-    transition: transform 0.24s ease, border-color 0.24s ease, background-color 0.24s ease;
+.learner-main-footer .copyright-links a {
+  color: #fff6cc;
+  margin: 0 6px;
 }
 
-.sanskar-pro-footer .social-icon-list li a:hover {
-    transform: translateY(-3px);
-    border-color: rgba(255, 208, 99, 0.65);
-    background: rgba(255, 208, 99, 0.22);
-}
-
-.sanskar-pro-footer .bd-footer-widget-title {
-    position: relative;
-    margin-bottom: 18px;
-    padding-bottom: 10px;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.sanskar-pro-footer .bd-footer-widget-title::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 44px;
-    height: 2px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--sanskar-footer-accent-soft), rgba(255, 255, 255, 0.82));
-}
-
-.sanskar-pro-footer .bd-footer-widget-links ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sanskar-pro-footer .bd-footer-widget-links li {
-    margin-bottom: 10px;
-}
-
-.sanskar-pro-footer .bd-footer-widget-links li:last-child {
-    margin-bottom: 0;
-}
-
-.sanskar-pro-footer .bd-footer-widget-links a {
-    display: inline-flex;
-    align-items: center;
-    color: #ffe6c4;
-    font-size: 15px;
-    transition: color 0.22s ease, transform 0.22s ease;
-}
-
-.sanskar-pro-footer .bd-footer-widget-links a::before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    margin-right: 8px;
-    border-top: 2px solid var(--sanskar-footer-accent);
-    border-right: 2px solid var(--sanskar-footer-accent);
-    transform: rotate(45deg) translateX(-4px);
-    opacity: 0;
-    transition: opacity 0.22s ease, transform 0.22s ease;
-}
-
-.sanskar-pro-footer .bd-footer-widget-links a:hover {
-    color: #ffffff;
-    transform: translateX(4px);
-}
-
-.sanskar-pro-footer .bd-footer-widget-links a:hover::before {
-    opacity: 1;
-    transform: rotate(45deg) translateX(0);
-}
-
-.sanskar-pro-footer .sanskar-contact-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sanskar-pro-footer .sanskar-contact-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 12px;
-    color: #ffe6c4;
-    font-size: 15px;
-}
-
-.sanskar-pro-footer .sanskar-contact-list li:last-child {
-    margin-bottom: 0;
-}
-
-.sanskar-pro-footer .sanskar-contact-list li span {
-    color: var(--sanskar-footer-accent);
-}
-
-.sanskar-pro-footer .sanskar-contact-list li a {
-    color: #ffe6c4;
-}
-
-.sanskar-pro-footer .sanskar-contact-list li a:hover {
-    color: #ffffff;
-}
-
-.sanskar-pro-footer .sanskar-newsletter-card {
-    padding: 18px;
-    border-radius: 14px;
-    border: 1px solid rgba(255, 231, 194, 0.3);
-    background: rgba(255, 244, 225, 0.12);
-}
-
-.sanskar-pro-footer .bd-footer-subscribe-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.sanskar-pro-footer .bd-footer-subscribe-form input {
-    height: 44px;
-    border: 1px solid rgba(255, 218, 157, 0.38);
-    border-radius: 10px;
-    padding: 0 14px;
-    color: #ffffff;
-    background: rgba(90, 37, 0, 0.35);
-}
-
-.sanskar-pro-footer .bd-footer-subscribe-form input::placeholder {
-    color: #f0c98f;
-}
-
-.sanskar-pro-footer .sanskar-subscribe-btn {
-    height: 44px;
-    border: 0;
-    border-radius: 10px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-    background: linear-gradient(120deg, var(--sanskar-footer-accent-deep), var(--sanskar-footer-accent-soft));
-    transition: filter 0.24s ease, transform 0.24s ease;
-}
-
-.sanskar-pro-footer .sanskar-subscribe-btn:hover {
-    filter: brightness(1.06);
-    transform: translateY(-1px);
-}
-
-.sanskar-pro-footer .sanskar-newsletter-note {
-    margin-top: 12px;
-    margin-bottom: 0;
-    color: #ffd8a3;
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.sanskar-pro-footer .bd-footer-copyright-area {
-    position: relative;
-    z-index: 2;
-    border-top: 1px solid rgba(255, 224, 181, 0.22);
-    background: rgba(72, 29, 0, 0.45);
-}
-
-.sanskar-pro-footer .sanskar-footer-bottom {
-    min-height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-}
-
-.sanskar-pro-footer .sanskar-footer-bottom p {
-    margin: 0;
-    color: #ffe6c6;
-    font-size: 14px;
-}
-
-.sanskar-pro-footer .sanskar-footer-bottom ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.sanskar-pro-footer .sanskar-footer-bottom ul a {
-    color: #ffe6c6;
-    font-size: 14px;
-}
-
-.sanskar-pro-footer .sanskar-footer-bottom ul a:hover {
-    color: #ffffff;
-}
-
-@keyframes sanskar-footer-rise {
-    from {
-        opacity: 0;
-        transform: translateY(22px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes sanskar-footer-float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 991px) {
-    .sanskar-pro-footer .sanskar-footer-highlight {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .sanskar-pro-footer .sanskar-footer-bottom {
-        min-height: auto;
-        padding: 16px 0;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 575px) {
-    .sanskar-pro-footer .bd-footer-area {
-        padding-top: 70px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .sanskar-pro-footer * {
-        animation: none !important;
-        transition: none !important;
-    }
+.learner-main-footer .copyright-links a:hover {
+  color: #ffffff;
 }
 </style>
 
-<!-- footer area start -->
-<footer class="sanskar-pro-footer">
-    <div class="bd-footer-area style-two has-footer-space theme-black fix">
-        <div class="container">
-            <div class="sanskar-footer-highlight">
-                <div>
-                    <span class="sanskar-footer-kicker">Admissions Open</span>
-                    <h5>Build A Future-Ready Learning Journey With Sanskar</h5>
-                </div>
-                <a class="sanskar-footer-cta" href="admission.html">Start Admission</a>
-            </div>
-
-            <div class="row gy-30 justify-content-between">
-                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="bd-footer-widget footer-2-col-1 sanskar-footer-widget sanskar-delay-1">
-                        <div class="bd-footer-widget-logo">
-                            <a href="index.html">
-                                <img src="assets/images/logo/logo.svg" alt="Sanskar logo">
-                            </a>
-                        </div>
-                        <div class="bd-footer-widget-content">
-                            <p class="bd-footer-widget-description">
-                                We nurture confident learners through academic excellence, strong values, and meaningful
-                                co-curricular exposure.
-                            </p>
-                            <div class="bd-footer-social">
-                                <div class="theme-social has-white">
-                                    <ul class="social-icon-list">
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6">
-                    <div class="bd-footer-widget footer-2-col-2 sanskar-footer-widget sanskar-delay-2">
-                        <h6 class="bd-footer-widget-title">Explore</h6>
-                        <div class="bd-footer-widget-links">
-                            <ul>
-                                <li><a href="aboutus.html">About Us</a></li>
-                                <li><a href="features.html">Key Features</a></li>
-                                <li><a href="house.html">House System</a></li>
-                                <li><a href="principal.html">Principal's Desk</a></li>
-                                <li><a href="director.html">Director's Desk</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6">
-                    <div class="bd-footer-widget footer-2-col-3 sanskar-footer-widget sanskar-delay-3">
-                        <h6 class="bd-footer-widget-title">Programs</h6>
-                        <div class="bd-footer-widget-links">
-                            <ul>
-                                <li><a href="circulum.html">Curriculum</a></li>
-                                <li><a href="cocir.html">Co-Curricular</a></li>
-                                <li><a href="sports.html">Sports</a></li>
-                                <li><a href="teacher.html">Teacher Training</a></li>
-                                <li><a href="events.html">Events</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-6 col-sm-6">
-                    <div class="bd-footer-widget footer-2-col-4 sanskar-footer-widget sanskar-delay-4">
-                        <h6 class="bd-footer-widget-title">Contact</h6>
-                        <ul class="sanskar-contact-list">
-                            <li>
-                                <span><i class="fa-solid fa-phone-volume"></i></span>
-                                <a href="tel:+18884467880">(888) 446-7880</a>
-                            </li>
-                            <li>
-                                <span><i class="fa-sharp fa-light fa-envelope"></i></span>
-                                <a href="mailto:admissions@sanskar.com">admissions@sanskar.com</a>
-                            </li>
-                            <li>
-                                <span><i class="fa-sharp fa-regular fa-location-dot"></i></span>
-                                Brooklyn, NY 12207
-                            </li>
-                            <li>
-                                <span><i class="fa-light fa-arrow-right"></i></span>
-                                <a href="contact.html">Visit Contact Page</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="bd-footer-widget footer-2-col-5 sanskar-footer-widget sanskar-delay-5">
-                        <h6 class="bd-footer-widget-title">Newsletter</h6>
-                        <div class="sanskar-newsletter-card">
-                            <form action="#">
-                                <div class="bd-footer-subscribe-form style-two">
-                                    <input type="email" placeholder="Enter your email" aria-label="Email address">
-                                    <button class="sanskar-subscribe-btn" type="submit">Subscribe</button>
-                                </div>
-                            </form>
-                            <p class="sanskar-newsletter-note">
-                                Monthly updates on admissions, events, and school highlights. No spam.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<footer class="footer learner-main-footer accent-background">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/images/logo/logo.svg" alt="Sanskar logo">
+          <span class="sitename">Sanskar</span>
+        </a>
+        <p>
+          Sanskar Innovative School builds academic strength, character, and confidence through a balanced
+          learning environment and meaningful co-curricular opportunities.
+        </p>
+        <div class="social-links d-flex mt-4">
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
         </div>
-    </div>
+      </div>
 
-    <div class="bd-footer-copyright-area style-two theme-bg fix bd-noise-bg">
-        <div class="container">
-            <div class="sanskar-footer-bottom">
-                <p>© Copyright <span id="year"></span> Sanskar Innovative School. All rights reserved.</p>
-                <ul>
-                    <li><a href="admission.html">Admission</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#">Privacy</a></li>
-                </ul>
-            </div>
-        </div>
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="aboutus.html">About Us</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="features.html">Key Features</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="admission.html">Admissions</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Programs</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a href="circulum.html">Curriculum</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="cocir.html">Co-Curricular</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="sports.html">Sports</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="teacher.html">Teacher Training</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="events.html">Events</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p>Brooklyn, NY 12207</p>
+        <p>United States</p>
+        <p class="mt-4"><strong>Phone:</strong> <span>(888) 446-7880</span></p>
+        <p><strong>Email:</strong> <span>admissions@sanskar.com</span></p>
+      </div>
     </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Sanskar</strong> <span><span id="year"></span>. All Rights Reserved</span></p>
+    <div class="copyright-links">
+      <a href="admission.html">Admission</a>|
+      <a href="gallery.html">Gallery</a>|
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </footer>
-<!-- footer area end -->
