@@ -1,0 +1,53 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*   2.28 Video css
+/*----------------------------------------*/
+
+.bd-video{
+    &-area{
+        &.style-one{
+            .video-bg-thumb{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                z-index: 1;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: rgba($color: $theme-black, $alpha: .70);
+                    inset: 0;
+                    z-index: -1;
+                }
+            }
+            .bd-video-content{
+                position: relative;
+                z-index: 4;
+                p{
+                    color: rgba(255, 255, 255, .7);
+                    margin-top: 20px;
+                }
+            }
+            .bd-video-play-btn{
+                position: relative;
+                z-index: 5;
+                .bd-video-btn{
+                    justify-content: center;
+                }
+                .icon{
+                    width: 80px;
+                    height: 80px;
+                    &:hover{
+                        background: var(--bd-secondary);
+                    }
+                }
+            }
+            .bd-section-title{
+                color: var(--bd-white);
+            }
+        }
+    }
+}

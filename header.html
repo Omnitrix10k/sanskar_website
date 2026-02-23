@@ -1,0 +1,230 @@
+<style>
+/* Anchor spacing */
+.submenu li a {
+    display: block;
+    padding: 18px 22px;                 /* increased outer padding */
+    line-height: 1.5;
+    transition: background 0.3s ease;
+}
+
+/* Heading */
+.submenu li a strong {
+    display: block;
+    font-size: 15.5px;
+    font-weight: 600;
+    color: #ff852f;                     /* dark orange */
+    margin-bottom: 10px;                /* GOOD space between head & sub-head */
+    letter-spacing: 0.2px;
+    transition: color 0.3s ease;
+}
+
+/* Sub heading */
+.submenu li a span {
+    display: block;
+    font-size: 13px;
+    color: #000;
+    opacity: 0.72;
+    line-height: 1.6;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover state */
+.submenu li a:hover strong {
+    color: #000;                        /* heading → black */
+}
+
+.submenu li a:hover span {
+    color: black;                     /* sub-heading → dark orange */
+    opacity: 1;
+}
+
+/* Optional soft hover background */
+.submenu li a:hover {
+    background: rgba(196, 85, 0, 0.08);
+}
+
+
+
+
+   </style>
+   <!-- Header area start -->
+    <header>
+        <div class="bd-header-transparent-two">
+            <div class="bd-header-top style-three">
+                <div class="bd-header-top-left">
+                    <ul>
+                        <li><a href="tel:+8884467880"><span><i class="fa-solid fa-phone-volume"></i></span>(888) 446-7880</a></li>
+                        <li><a href="mailto:example@Sanskar.com"><span><i
+                            class="fa-sharp fa-light fa-envelope"></i></span>example@Sanskar.com</a></li>
+                    </ul>
+                </div>
+                <div class="bd-header-top-right text-md-end">
+                    <a href="#"><span><i class="fa-sharp fa-regular fa-location-dot"></i></span>Brooklyn, NY 12207, New York</a>
+                </div>
+            </div>
+            <div class="bd-header-area header-style-one" id="header-sticky">
+                <div class="bd-header-inner">
+                    <div class="bd-header-left">
+                        <div class="bd-header-logo">
+                            <a href="index.html"><img src="assets/images/logo/logo.svg" alt="logo"></a>
+                        </div>
+                        
+                    </div>
+                    <div class="bd-header-right">
+                        <div class="bd-header-menu">
+                            <nav class="main-menu bd-mobile-menu-active d-none d-xl-block">
+                                <ul>
+                                    <li><a href="/">Home</a></li>
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)" >About Us</a>
+                                        <ul class="submenu">
+                                            <li><a href="/aboutus.html">About Sanskar</a></li>
+                                            <li><a href="/features.html">Key Features</a></li>
+                                            <li><a href="/principal.html">Principal’s Desk</a></li>
+                                            <li><a href="/director.html">Director’s Desk</a></li>
+                                            <li><a href="/house.html">House System</a></li>
+                                            <li><a href="#">MPD</a></li>
+                                            <li><a href="#">CBSE Oasis Documents</a></li>
+                                             
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+    <a href="javascript:void(0)">Our Programs</a>
+
+    <ul class="submenu">
+        <li>
+            <a href="#">
+                <strong>ACADEMICS</strong>
+                 <span><a href="/circulum.html" style="font-size: 15px;">Curriculum</a></span>
+                
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <strong>DEVELOPMENT</strong>
+                
+                <span><a href="/cocir.html" style="font-size: 15px;">Co-Curricular-Activities</a></span>
+                 <span><a href="/sports.html" style="font-size: 15px;">Strength & Sportsmanship</a></span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <strong>COMMUNITY PROGRAMS</strong>
+                
+                <span><a href="/teacher.html" style="font-size: 15px;">Teachers's Training</a></span>
+                 <span><a href="/events.html" style="font-size: 15px;">Upcoming Events</a></span>
+            </a>
+        </li>
+
+        
+    </ul>
+</li>
+
+                                    <li class="menu-item-has-children">
+                                        <a href="javascript:void(0)">Admissions
+                                        </a>
+                                        <ul class="submenu">
+                                            <li><a href="/admission.html">Admissions process</a></li>
+                                            <li><a href="/form.html">Application Form</a></li>
+                                            <li><a href="/document.html">Documents CheckList</a></li>
+                                            
+                                             
+                                        </ul>
+                                    </li>
+                                    <li><a href="/carrier.html">Career's</a></li>
+                                    <li><a href="/gallery.html">Gallery</a></li>
+                                    <li><a href="/contact.html">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="bd-header-hamburger">
+                            <div class="sidebar-toggle">
+                                <a class="bar-icon" href="javascript:void(0)">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header area end -->
+
+    <!-- Offcanvas area start -->
+    <div class="fix">
+        <div class="bd-offcanvas-area">
+            <div class="bd-offcanvas-wrapper">
+                <div class="bd-offcanvas-content">
+                    <div class="bd-offcanvas-top d-flex justify-content-between align-items-center mb-30">
+                        <div class="bd-offcanvas-logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logo.svg" alt="logo not found">
+                            </a>
+                        </div>
+                        <div class="bd-offcanvas-close">
+                            <button class="bd-offcanvas-close-icon animation--flip">
+                                <span class="bd-offcanvas-m-lines">
+                                <span class="bd-offcanvas-m-line line--1"></span><span
+                                    class="bd-offcanvas-m-line line--2"></span><span
+                                    class="bd-offcanvas-m-line line--3"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bd-offcanvas-search mb-30">
+                        <form action="#">
+                            <input type="text" name="bd-offcanvasSearch" placeholder="Search here">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <div class="bd-mobile-menu-smaller">
+                        <div class="bd-offcanvas-menu mb-30">
+                            <nav></nav>
+                        </div>
+                    </div>
+                    <div class="bd-offcanvas-about d-none d-lg-block mb-30">
+                        <h4 class="bd-offcanvas-title-meta">About Sanskar</h4>
+                        <p>Empowering learners and educators with a comprehensive platform that bridges the gap between traditional and modern education. Sanskar inspires excellence in education and fosters growth for a brighter future.</p>
+                    </div>
+                    <div class="bd-offcanvas-contact mb-30">
+                        <h4 class="bd-offcanvas-title-meta">Contact Info</h4>
+                        <ul>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="bd-offcanvas-contact-icon">
+                                    <a target="_blank" href="#">
+                                        <i class="fal fa-map-marker-alt"></i></a>
+                                </div>
+                                <div class="bd-offcanvas-contact-text">
+                                    <a target="_blank" href="#">123 Knowledge Lane, Learnville, 54321, USA</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="bd-offcanvas-contact-icon">
+                                    <a href="tel:+1234567890"><i class="far fa-phone"></i></a>
+                                </div>
+                                <div class="bd-offcanvas-contact-text">
+                                    <a href="tel:+1234567890">+1-234-567-890</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-10">
+                                <div class="bd-offcanvas-contact-icon">
+                                    <a href="mailto:info@Sanskar.com"><i class="fal fa-envelope"></i></a>
+                                </div>
+                                <div class="bd-offcanvas-contact-text">
+                                    <a href="mailto:info@Sanskar.com">info@Sanskar.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bd-offcanvas-overlay"></div>
+    <div class="bd-offcanvas-overlay-white"></div>
+    <!-- Offcanvas area start -->

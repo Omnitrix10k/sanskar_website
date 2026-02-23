@@ -1,0 +1,548 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Courses Grid</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/favicon.svg">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css">
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/icomoon.css">
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css">
+    <link rel="stylesheet" href="assets/css/plugins/apexcharts.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  
+
+<style>
+    .bd-preloader-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .preloader-logo {
+        max-width: 120px;
+        margin-bottom: 30px;
+    }
+
+    .preloader-animation-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+    }
+
+    .preloader-img-left,
+    .preloader-img-right {
+        width: 40px;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    .preloader-img-left {
+        animation-name: move-left;
+    }
+
+    .preloader-img-right {
+        animation-name: move-right;
+    }
+
+    @keyframes move-left {
+
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(-50px);
+        }
+    }
+
+    @keyframes move-right {
+
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(50px);
+        }
+    }
+
+    .loading-bar-container {
+        height: 6px;
+        width: 0;
+        animation: stretch-bar 2.5s infinite ease-in-out;
+    }
+
+    .loading-bar {
+        height: 100%;
+        width: 100%;
+        background-color: darkorange;
+        border-radius: 3px;
+    }
+
+    @keyframes stretch-bar {
+
+        0%,
+        100% {
+            width: 0;
+        }
+
+        50% {
+            width: 100px;
+        }
+    }
+
+    .bd-preloader-subtitle {
+        margin-top: 20px;
+        text-transform: capitalize;
+        font-size: 18px;
+        color: #555;
+    }
+</style><!-- preloader start -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="bd-preloader-content">
+                    <img src="assets/images/logo/logo.svg" alt="logo" class="preloader-logo">
+                    <div class="preloader-animation-container">
+                        <img src="assets/images/shape/bookorange.webp" alt="shape" class="preloader-img-left">
+                        <div class="loading-bar-container">
+                            <div class="loading-bar"></div>
+                        </div>
+                        <img src="assets/images/shape/pencil.webp" alt="shape" class="preloader-img-right">
+                    </div>
+                    <p class="bd-preloader-subtitle">loading</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+
+    <div id="header"></div>
+
+                            
+     <!-- Body main wrapper start -->
+    <main>
+
+        <!-- breadcrumb area start -->
+        <section class="bd-breadcrumb-area p-relative fix z-index-11">
+            <div class="bd-breadcrumb-bg-two" data-background="assets/images/about/portrait-young-woman-standing-against-yellow-background.jpg"></div>
+            <div class="bd-breadcrumb-wrapper p-relative">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="bd-breadcrumb style-two d-flex-center">
+                                <div class="bd-breadcrumb-content">
+                                    <h1 class="bd-breadcrumb-title">Key Features</h1>
+                                    <div class="bd-breadcrumb-list">
+                                        <span><a href="/">Sanskar</a></span>
+                                        <span class="divider"><i class="fa-regular fa-angle-right"></i></span>
+                                        <span class="active">Key Features</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bd-breadcrumb-shape">
+                        <div class="shape-1"><img src="assets/images/shape/breadcrumb-shape-1.webp" alt="shape"></div>
+                        <div class="shape-3"><img src="assets/images/shape/bulb-shape.webp" alt="shape"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb area end -->
+
+        <!-- course grid area start -->
+        <section class="bd-course-grid-area section-space">
+            <div class="container">
+                <div class="row g-30 align-items-center justify-content-between mb-30">
+                    <div class="col-xl-5 col-lg-5 col-md-12 col-12">
+                        <div class="d-flex-between">
+                            <div class="bd-top-sorting-left">
+                                <h6 class="bd-sorting-item-found">We found <span>6</span> Features available for you</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <!-- course grid style -->
+                <div class="row g-30">
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                        <div class="bd-course-wrapper style-two">
+                            <a href="courses-details.html" class="bd-course-thumb-wrapper bd-course-thumb-style-two p-relative">
+                                <div class="bd-course-thumb">
+                                    <img src="assets/images/about/schoolboy-blackboard (1).jpg" alt="image">
+                                </div>
+                                <div class="bd-course-shape"><img src="assets/images/course/course-shape-9.webp" alt="shape">
+                                </div>
+                               
+                            </a>
+                            <div class="bd-course-content">
+                                <div class="bd-course-meta d-flex-between mb-15">
+                                    <div class="bd-course-tag">
+                                        <a class="bd-badge badge-outline-light badge-transparent" href="#">Learn PHP</a>
+                                    </div>
+                                    <div class="bd-course-lesson">
+                                        <span><i class="fa-light fa-book"></i> 11 Lessons</span>
+                                    </div>
+                                </div>
+                                <h5 class="bd-course-title underline mb-10"><a href="courses-details.html">Cultural
+                                        Odyssey Unveiling Heritage & Traditions</a>
+                                </h5>
+                                <div class="bd-course-rating d-flex-between flex-wrap">
+                                    <div class="bd-course-price">
+                                        <span class="current-price">$1925.00</span>
+                                    </div>
+                                    <div class="bd-course-rating-wrap d-flex flex-wrap align-items-center gap-10">
+                                        <div class="bd-course-rating-icon fs-14 d-flex rating-color">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="bd-course-rating-text">
+                                            <span>4.8 (258)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bd-course-full-border"></div>
+                                <div class="btn-wrap d-flex align-items-center justify-content-between flex-wrap gap-10">
+                                   
+                                    <div class="bd-course-btn">
+                                        <a class="bd-text-btn" href="courses-details.html">Enroll Now
+                                            <span class="box-icon">
+                                    <i class="fa-regular fa-arrow-right-long first-icon"></i>
+                                    <i class="fa-regular fa-arrow-right-long second-icon"></i>
+                                 </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                        <div class="bd-course-wrapper style-two">
+                            <a href="courses-details.html" class="bd-course-thumb-wrapper bd-course-thumb-style-two p-relative">
+                                <div class="bd-course-thumb">
+                                    <img src="assets/images/about/schoolboy-blackboard (1).jpg" alt="image">
+                                </div>
+                                <div class="bd-course-shape"><img src="assets/images/course/course-shape-9.webp" alt="shape">
+                                </div>
+                               
+                            </a>
+                            <div class="bd-course-content">
+                                <div class="bd-course-meta d-flex-between mb-15">
+                                    <div class="bd-course-tag">
+                                        <a class="bd-badge badge-outline-light badge-transparent" href="#">Learn PHP</a>
+                                    </div>
+                                    <div class="bd-course-lesson">
+                                        <span><i class="fa-light fa-book"></i> 11 Lessons</span>
+                                    </div>
+                                </div>
+                                <h5 class="bd-course-title underline mb-10"><a href="courses-details.html">Cultural
+                                        Odyssey Unveiling Heritage & Traditions</a>
+                                </h5>
+                                <div class="bd-course-rating d-flex-between flex-wrap">
+                                    <div class="bd-course-price">
+                                        <span class="current-price">$1925.00</span>
+                                    </div>
+                                    <div class="bd-course-rating-wrap d-flex flex-wrap align-items-center gap-10">
+                                        <div class="bd-course-rating-icon fs-14 d-flex rating-color">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="bd-course-rating-text">
+                                            <span>4.8 (258)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bd-course-full-border"></div>
+                                <div class="btn-wrap d-flex align-items-center justify-content-between flex-wrap gap-10">
+                                   
+                                    <div class="bd-course-btn">
+                                        <a class="bd-text-btn" href="courses-details.html">Enroll Now
+                                            <span class="box-icon">
+                                    <i class="fa-regular fa-arrow-right-long first-icon"></i>
+                                    <i class="fa-regular fa-arrow-right-long second-icon"></i>
+                                 </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                        <div class="bd-course-wrapper style-two">
+                            <a href="courses-details.html" class="bd-course-thumb-wrapper bd-course-thumb-style-two p-relative">
+                                <div class="bd-course-thumb">
+                                    <img src="assets/images/about/schoolboy-blackboard (1).jpg" alt="image">
+                                </div>
+                                <div class="bd-course-shape"><img src="assets/images/course/course-shape-9.webp" alt="shape">
+                                </div>
+                               
+                            </a>
+                            <div class="bd-course-content">
+                                <div class="bd-course-meta d-flex-between mb-15">
+                                    <div class="bd-course-tag">
+                                        <a class="bd-badge badge-outline-light badge-transparent" href="#">Learn PHP</a>
+                                    </div>
+                                    <div class="bd-course-lesson">
+                                        <span><i class="fa-light fa-book"></i> 11 Lessons</span>
+                                    </div>
+                                </div>
+                                <h5 class="bd-course-title underline mb-10"><a href="courses-details.html">Cultural
+                                        Odyssey Unveiling Heritage & Traditions</a>
+                                </h5>
+                                <div class="bd-course-rating d-flex-between flex-wrap">
+                                    <div class="bd-course-price">
+                                        <span class="current-price">$1925.00</span>
+                                    </div>
+                                    <div class="bd-course-rating-wrap d-flex flex-wrap align-items-center gap-10">
+                                        <div class="bd-course-rating-icon fs-14 d-flex rating-color">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="bd-course-rating-text">
+                                            <span>4.8 (258)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bd-course-full-border"></div>
+                                <div class="btn-wrap d-flex align-items-center justify-content-between flex-wrap gap-10">
+                                   
+                                    <div class="bd-course-btn">
+                                        <a class="bd-text-btn" href="courses-details.html">Enroll Now
+                                            <span class="box-icon">
+                                    <i class="fa-regular fa-arrow-right-long first-icon"></i>
+                                    <i class="fa-regular fa-arrow-right-long second-icon"></i>
+                                 </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                        <div class="bd-course-wrapper style-two">
+                            <a href="courses-details.html" class="bd-course-thumb-wrapper bd-course-thumb-style-two p-relative">
+                                <div class="bd-course-thumb">
+                                    <img src="assets/images/about/schoolboy-blackboard (1).jpg" alt="image">
+                                </div>
+                                <div class="bd-course-shape"><img src="assets/images/course/course-shape-9.webp" alt="shape">
+                                </div>
+                               
+                            </a>
+                            <div class="bd-course-content">
+                                <div class="bd-course-meta d-flex-between mb-15">
+                                    <div class="bd-course-tag">
+                                        <a class="bd-badge badge-outline-light badge-transparent" href="#">Learn PHP</a>
+                                    </div>
+                                    <div class="bd-course-lesson">
+                                        <span><i class="fa-light fa-book"></i> 11 Lessons</span>
+                                    </div>
+                                </div>
+                                <h5 class="bd-course-title underline mb-10"><a href="courses-details.html">Cultural
+                                        Odyssey Unveiling Heritage & Traditions</a>
+                                </h5>
+                                <div class="bd-course-rating d-flex-between flex-wrap">
+                                    <div class="bd-course-price">
+                                        <span class="current-price">$1925.00</span>
+                                    </div>
+                                    <div class="bd-course-rating-wrap d-flex flex-wrap align-items-center gap-10">
+                                        <div class="bd-course-rating-icon fs-14 d-flex rating-color">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="bd-course-rating-text">
+                                            <span>4.8 (258)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bd-course-full-border"></div>
+                                <div class="btn-wrap d-flex align-items-center justify-content-between flex-wrap gap-10">
+                                   
+                                    <div class="bd-course-btn">
+                                        <a class="bd-text-btn" href="courses-details.html">Enroll Now
+                                            <span class="box-icon">
+                                    <i class="fa-regular fa-arrow-right-long first-icon"></i>
+                                    <i class="fa-regular fa-arrow-right-long second-icon"></i>
+                                 </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                        <div class="bd-course-wrapper style-two">
+                            <a href="courses-details.html" class="bd-course-thumb-wrapper bd-course-thumb-style-two p-relative">
+                                <div class="bd-course-thumb">
+                                    <img src="assets/images/about/schoolboy-blackboard (1).jpg" alt="image">
+                                </div>
+                                <div class="bd-course-shape"><img src="assets/images/course/course-shape-9.webp" alt="shape">
+                                </div>
+                               
+                            </a>
+                            <div class="bd-course-content">
+                                <div class="bd-course-meta d-flex-between mb-15">
+                                    <div class="bd-course-tag">
+                                        <a class="bd-badge badge-outline-light badge-transparent" href="#">Learn PHP</a>
+                                    </div>
+                                    <div class="bd-course-lesson">
+                                        <span><i class="fa-light fa-book"></i> 11 Lessons</span>
+                                    </div>
+                                </div>
+                                <h5 class="bd-course-title underline mb-10"><a href="courses-details.html">Cultural
+                                        Odyssey Unveiling Heritage & Traditions</a>
+                                </h5>
+                                <div class="bd-course-rating d-flex-between flex-wrap">
+                                    <div class="bd-course-price">
+                                        <span class="current-price">$1925.00</span>
+                                    </div>
+                                    <div class="bd-course-rating-wrap d-flex flex-wrap align-items-center gap-10">
+                                        <div class="bd-course-rating-icon fs-14 d-flex rating-color">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="bd-course-rating-text">
+                                            <span>4.8 (258)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bd-course-full-border"></div>
+                                <div class="btn-wrap d-flex align-items-center justify-content-between flex-wrap gap-10">
+                                   
+                                    <div class="bd-course-btn">
+                                        <a class="bd-text-btn" href="courses-details.html">Enroll Now
+                                            <span class="box-icon">
+                                    <i class="fa-regular fa-arrow-right-long first-icon"></i>
+                                    <i class="fa-regular fa-arrow-right-long second-icon"></i>
+                                 </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                        <div class="bd-course-wrapper style-two">
+                            <a href="courses-details.html" class="bd-course-thumb-wrapper bd-course-thumb-style-two p-relative">
+                                <div class="bd-course-thumb">
+                                    <img src="assets/images/about/schoolboy-blackboard (1).jpg" alt="image">
+                                </div>
+                                <div class="bd-course-shape"><img src="assets/images/course/course-shape-9.webp" alt="shape">
+                                </div>
+                               
+                            </a>
+                            <div class="bd-course-content">
+                                <div class="bd-course-meta d-flex-between mb-15">
+                                    <div class="bd-course-tag">
+                                        <a class="bd-badge badge-outline-light badge-transparent" href="#">Learn PHP</a>
+                                    </div>
+                                    <div class="bd-course-lesson">
+                                        <span><i class="fa-light fa-book"></i> 11 Lessons</span>
+                                    </div>
+                                </div>
+                                <h5 class="bd-course-title underline mb-10"><a href="courses-details.html">Cultural
+                                        Odyssey Unveiling Heritage & Traditions</a>
+                                </h5>
+                                <div class="bd-course-rating d-flex-between flex-wrap">
+                                    <div class="bd-course-price">
+                                        <span class="current-price">$1925.00</span>
+                                    </div>
+                                    <div class="bd-course-rating-wrap d-flex flex-wrap align-items-center gap-10">
+                                        <div class="bd-course-rating-icon fs-14 d-flex rating-color">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="bd-course-rating-text">
+                                            <span>4.8 (258)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bd-course-full-border"></div>
+                                <div class="btn-wrap d-flex align-items-center justify-content-between flex-wrap gap-10">
+                                   
+                                    <div class="bd-course-btn">
+                                        <a class="bd-text-btn" href="courses-details.html">Enroll Now
+                                            <span class="box-icon">
+                                    <i class="fa-regular fa-arrow-right-long first-icon"></i>
+                                    <i class="fa-regular fa-arrow-right-long second-icon"></i>
+                                 </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- course grid style end -->
+
+                <!-- course-more style -->
+                 <!-- <div class="bd-course-more-btn d-flex justify-content-center mt-50">
+                    <a class="bd-btn btn-outline-border-primary" href="#">Load More <span class="right-icon"><i
+                        class="fa-duotone fa-spinner"></i></span></a>
+                </div>  -->
+                <!-- course-more style end -->
+            </div>
+        </section>
+        <!-- course grid area end -->
+  <div id="contactpage"></div>
+  <div id="footer"></div>
+    </main>
+    <!-- JS here -->
+
+<script src="assets/js/layout.js"></script>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/waypoints.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/wow.js"></script>
+    <script src="assets/js/vendor/magnific-popup.min.js"></script>
+    <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+    <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="assets/js/vendor/ajax-form.js"></script>
+    <script src="assets/js/plugins/easypie.js"></script>
+    <script src="assets/js/vendor/purecounter.js"></script>
+    <script src="assets/js/plugins/nouislider.min.js"></script>
+    <script src="assets/js/plugins/apexcharts.min.js"></script>
+    <script src="assets/js/plugins/typed.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
