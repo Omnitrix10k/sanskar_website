@@ -1,0 +1,917 @@
+/*--------------------------------------------------------------
+# Admission Process Page
+--------------------------------------------------------------*/
+.admission-process-page {
+  --ap-bg: #fff4e6;
+  --ap-ink: #2a1708;
+  --ap-text: rgba(46, 30, 14, 0.82);
+  --ap-muted: rgba(67, 44, 21, 0.66);
+  --ap-border: rgba(255, 166, 63, 0.35);
+  --ap-border-strong: rgba(255, 147, 33, 0.52);
+  --ap-surface: rgba(255, 255, 255, 0.88);
+  --ap-surface-strong: rgba(255, 255, 255, 0.94);
+  --ap-grad-main: linear-gradient(120deg, #ff6a00 0%, #ff9933 52%, #ffd84d 100%);
+  background: var(--ap-bg);
+}
+
+.admission-process-page .section-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 15px;
+  border-radius: 999px;
+  border: 1px solid var(--ap-border);
+  background: rgba(255, 249, 238, 0.92);
+  color: #b45d00;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.admission-process-page .section-head {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.admission-process-page .section-head h2 {
+  margin: 14px auto 8px;
+  color: var(--ap-ink);
+  font-size: clamp(30px, 4.2vw, 50px);
+  line-height: 1.1;
+  max-width: 880px;
+}
+
+.admission-process-page .section-head p {
+  margin: 0 auto;
+  max-width: 760px;
+  color: var(--ap-text);
+  font-size: 17px;
+  line-height: 1.64;
+}
+
+/*--------------------------------------------------------------
+# Intro Hero
+--------------------------------------------------------------*/
+.admission-process-page .admission-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 74px 0 86px;
+  background:
+    radial-gradient(circle at 9% 18%, rgba(255, 194, 114, 0.24) 0%, rgba(255, 194, 114, 0) 44%),
+    radial-gradient(circle at 92% 82%, rgba(255, 126, 17, 0.16) 0%, rgba(255, 126, 17, 0) 47%),
+    var(--ap-bg);
+}
+
+.admission-process-page .admission-hero-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid var(--ap-border);
+  background: linear-gradient(162deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 244, 225, 0.8) 100%);
+  box-shadow: 0 24px 42px rgba(66, 33, 5, 0.12);
+  padding: clamp(20px, 2.8vw, 34px);
+}
+
+.admission-process-page .admission-hero-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--ap-grad-main);
+  opacity: 0.9;
+}
+
+.admission-process-page .hero-shape {
+  position: absolute;
+  pointer-events: none;
+}
+
+.admission-process-page .hero-shape.shape-ring {
+  width: 172px;
+  height: 172px;
+  right: -42px;
+  top: -52px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 175, 86, 0.42);
+  box-shadow: inset 0 0 0 20px rgba(255, 218, 158, 0.2);
+  animation: apFloatY 8s ease-in-out infinite;
+}
+
+.admission-process-page .hero-shape.shape-dots {
+  width: 130px;
+  height: 130px;
+  left: -28px;
+  bottom: -34px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 144, 26, 0.84) 2px, transparent 3px) 0 0 / 11px 11px,
+    rgba(255, 214, 145, 0.22);
+}
+
+.admission-process-page .hero-shape.shape-orb {
+  width: 106px;
+  height: 106px;
+  right: 7%;
+  top: 28%;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 24%, rgba(255, 249, 238, 0.84) 0%, rgba(255, 185, 93, 0.22) 66%, rgba(255, 185, 93, 0) 100%);
+  animation: apFloatY 6.8s ease-in-out infinite reverse;
+}
+
+.admission-process-page .hero-shape.shape-wave {
+  width: 280px;
+  height: 70px;
+  left: 3%;
+  bottom: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 220, 167, 0.4) 0%, rgba(255, 220, 167, 0) 100%);
+  filter: blur(1px);
+}
+
+.admission-process-page .admission-hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.admission-process-page .admission-hero-copy h1 {
+  margin: 14px 0 12px;
+  color: var(--ap-ink);
+  font-size: clamp(36px, 5vw, 66px);
+  line-height: 1.07;
+}
+
+.admission-process-page .admission-hero-copy p {
+  margin: 0;
+  color: var(--ap-text);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.admission-process-page .admission-hero-points {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.admission-process-page .admission-hero-points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ap-muted);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.admission-process-page .admission-hero-points i {
+  color: #ff7d10;
+}
+
+.admission-process-page .admission-hero-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.admission-process-page .admission-btn {
+  min-height: 48px;
+  border-radius: 999px;
+  padding: 11px 20px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease, background-color 300ms ease, color 300ms ease;
+}
+
+.admission-process-page .admission-btn-primary {
+  color: #fffdf7;
+  background: var(--ap-grad-main);
+  box-shadow: 0 14px 24px rgba(255, 122, 14, 0.28);
+}
+
+.admission-process-page .admission-btn-primary:hover {
+  color: #fffdf7;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 30px rgba(255, 122, 14, 0.36);
+}
+
+.admission-process-page .admission-btn-ghost {
+  color: #8b4609;
+  border-color: rgba(255, 147, 31, 0.38);
+  background: rgba(255, 250, 241, 0.9);
+}
+
+.admission-process-page .admission-btn-ghost:hover {
+  color: #8b4609;
+  transform: translateY(-2px);
+  border-color: rgba(255, 138, 22, 0.5);
+  background: rgba(255, 248, 236, 0.98);
+}
+
+.admission-process-page .admission-hero-scene {
+  position: relative;
+  min-height: 500px;
+  z-index: 2;
+}
+
+.admission-process-page .scene-media {
+  margin: 0;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid var(--ap-border);
+  background: #fff;
+  box-shadow: 0 20px 36px rgba(64, 31, 4, 0.14);
+}
+
+.admission-process-page .scene-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 420ms ease;
+}
+
+.admission-process-page .scene-media:hover img {
+  transform: scale(1.06);
+}
+
+.admission-process-page .scene-main {
+  width: 66%;
+  height: 380px;
+  right: 3%;
+  top: 20px;
+  z-index: 2;
+}
+
+.admission-process-page .scene-mini {
+  width: 36%;
+  height: 170px;
+  z-index: 3;
+  animation: apFloatCard 8s ease-in-out infinite;
+}
+
+.admission-process-page .scene-mini-a {
+  left: 0;
+  top: 74px;
+}
+
+.admission-process-page .scene-mini-b {
+  left: 20%;
+  bottom: 8px;
+  animation-delay: 240ms;
+}
+
+.admission-process-page .hero-chip {
+  position: absolute;
+  z-index: 4;
+  min-height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 165, 58, 0.35);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  padding: 7px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #6f3a0c;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0 12px 20px rgba(103, 52, 9, 0.14);
+}
+
+.admission-process-page .hero-chip i {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #fff9ef;
+  background: var(--ap-grad-main);
+}
+
+.admission-process-page .chip-a {
+  top: 10px;
+  left: 35%;
+}
+
+.admission-process-page .chip-b {
+  right: 0;
+  top: 66%;
+}
+
+.admission-process-page .chip-c {
+  left: 8%;
+  bottom: -4px;
+}
+
+/*--------------------------------------------------------------
+# Timeline Section
+--------------------------------------------------------------*/
+.admission-process-page .admission-timeline {
+  position: relative;
+  padding: 14px 0 86px;
+}
+
+.admission-process-page .process-timeline-track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.admission-process-page .process-timeline-track::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 8px;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgba(255, 118, 12, 0.65) 0%, rgba(255, 201, 121, 0.45) 48%, rgba(255, 118, 12, 0.65) 100%);
+}
+
+.admission-process-page .timeline-flow-item {
+  position: relative;
+  z-index: 2;
+  width: calc(50% - 54px);
+}
+
+.admission-process-page .timeline-flow-item:nth-child(odd) {
+  align-self: flex-start;
+  text-align: right;
+}
+
+.admission-process-page .timeline-flow-item:nth-child(even) {
+  align-self: flex-end;
+}
+
+.admission-process-page .timeline-flow-content {
+  display: grid;
+  gap: 12px;
+}
+
+.admission-process-page .timeline-flow-item:nth-child(odd) .timeline-flow-content {
+  justify-items: end;
+}
+
+.admission-process-page .timeline-flow-copy {
+  width: 100%;
+  max-width: 94%;
+}
+
+.admission-process-page .timeline-node {
+  position: absolute;
+  top: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fffaf1;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: var(--ap-grad-main);
+  box-shadow: 0 0 0 5px rgba(255, 214, 147, 0.32);
+  z-index: 5;
+}
+
+.admission-process-page .timeline-flow-item:nth-child(odd) .timeline-node {
+  right: -62px;
+}
+
+.admission-process-page .timeline-flow-item:nth-child(even) .timeline-node {
+  left: -62px;
+}
+
+.admission-process-page .timeline-flow-item::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 48px;
+  height: 1px;
+  background: rgba(255, 163, 59, 0.5);
+}
+
+.admission-process-page .timeline-flow-item:nth-child(odd)::after {
+  right: -48px;
+}
+
+.admission-process-page .timeline-flow-item:nth-child(even)::after {
+  left: -48px;
+}
+
+.admission-process-page .timeline-step-number {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 165, 58, 0.32);
+  background: rgba(255, 247, 232, 0.92);
+  color: #a65604;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.admission-process-page .timeline-flow-copy h3 {
+  margin: 9px 0 7px;
+  color: var(--ap-ink);
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.06;
+}
+
+.admission-process-page .timeline-flow-copy p {
+  margin: 0;
+  color: var(--ap-text);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.admission-process-page .timeline-flow-media {
+  margin: 0;
+  width: min(100%, 420px);
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 170, 74, 0.38);
+  box-shadow: 0 14px 24px rgba(71, 37, 7, 0.12);
+}
+
+.admission-process-page .timeline-flow-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 360ms ease;
+}
+
+.admission-process-page .timeline-flow-item:hover .timeline-flow-media img {
+  transform: scale(1.06);
+}
+
+/*--------------------------------------------------------------
+# Eligibility
+--------------------------------------------------------------*/
+.admission-process-page .admission-eligibility {
+  position: relative;
+  padding: 10px 0 90px;
+}
+
+.admission-process-page .eligibility-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  border: 1px solid var(--ap-border);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.86) 0%, rgba(255, 246, 228, 0.82) 100%);
+  box-shadow: 0 20px 36px rgba(71, 37, 7, 0.11);
+  padding: clamp(16px, 2.3vw, 24px);
+}
+
+.admission-process-page .eligibility-shape {
+  position: absolute;
+  pointer-events: none;
+}
+
+.admission-process-page .eligibility-shape.shape-a {
+  width: 146px;
+  height: 146px;
+  top: -32px;
+  right: -42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 171, 77, 0.42);
+  box-shadow: inset 0 0 0 16px rgba(255, 213, 146, 0.18);
+}
+
+.admission-process-page .eligibility-shape.shape-b {
+  width: 110px;
+  height: 110px;
+  left: -26px;
+  bottom: -24px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 142, 22, 0.8) 2px, transparent 3px) 0 0 / 11px 11px,
+    rgba(255, 208, 133, 0.2);
+}
+
+.admission-process-page .eligibility-shape.shape-c {
+  width: 250px;
+  height: 60px;
+  left: 20%;
+  bottom: -16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 220, 164, 0.38) 0%, rgba(255, 220, 164, 0) 100%);
+}
+
+.admission-process-page .eligibility-list {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 4px;
+}
+
+.admission-process-page .eligibility-row {
+  display: grid;
+  grid-template-columns: minmax(170px, 230px) minmax(0, 1fr);
+  align-items: center;
+  gap: 14px 18px;
+  padding: 12px 0;
+  border-bottom: 1px dashed rgba(255, 178, 92, 0.5);
+}
+
+.admission-process-page .eligibility-row:last-child {
+  border-bottom: 0;
+}
+
+.admission-process-page .eligibility-row h3 {
+  margin: 0;
+  min-height: 56px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 171, 74, 0.38);
+  background: rgba(255, 252, 246, 0.92);
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  color: #2a1708;
+  font-size: clamp(26px, 2.5vw, 34px);
+  line-height: 1.05;
+}
+
+.admission-process-page .eligibility-age-pills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+.admission-process-page .age-pill {
+  min-height: 56px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 171, 74, 0.38);
+  background: rgba(255, 252, 246, 0.92);
+  padding: 8px 12px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.admission-process-page .age-pill small {
+  color: #a95d08;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.admission-process-page .age-pill strong {
+  margin-top: 3px;
+  color: #35200d;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.admission-process-page .eligibility-note {
+  position: relative;
+  z-index: 2;
+  margin: 14px 0 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--ap-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.admission-process-page .eligibility-note i {
+  margin-top: 2px;
+  color: #ff840f;
+  flex-shrink: 0;
+}
+
+/*--------------------------------------------------------------
+# Motion
+--------------------------------------------------------------*/
+@keyframes apFloatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes apFloatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 1199px) {
+  .admission-process-page .admission-hero-scene {
+    min-height: 450px;
+  }
+
+  .admission-process-page .scene-main {
+    height: 332px;
+  }
+
+  .admission-process-page .scene-mini {
+    height: 152px;
+  }
+
+  .admission-process-page .process-timeline-track {
+    gap: 24px;
+  }
+
+  .admission-process-page .timeline-node {
+    width: 34px;
+    height: 34px;
+    font-size: 11px;
+  }
+
+  .admission-process-page .timeline-flow-item:nth-child(odd) .timeline-node {
+    right: -52px;
+  }
+
+  .admission-process-page .timeline-flow-item:nth-child(even) .timeline-node {
+    left: -52px;
+  }
+
+  .admission-process-page .timeline-flow-item::after {
+    width: 38px;
+  }
+
+  .admission-process-page .timeline-flow-item:nth-child(odd)::after {
+    right: -38px;
+  }
+
+  .admission-process-page .timeline-flow-item:nth-child(even)::after {
+    left: -38px;
+  }
+
+  .admission-process-page .timeline-flow-item {
+    width: calc(50% - 44px);
+  }
+}
+
+@media (max-width: 991px) {
+  .admission-process-page .admission-hero {
+    padding: 62px 0 74px;
+  }
+
+  .admission-process-page .admission-hero-copy h1 {
+    font-size: clamp(34px, 7.1vw, 54px);
+  }
+
+  .admission-process-page .admission-hero-copy p {
+    font-size: 16px;
+  }
+
+  .admission-process-page .admission-hero-scene {
+    min-height: 410px;
+  }
+
+  .admission-process-page .scene-main {
+    width: 64%;
+    height: 300px;
+    right: 6%;
+  }
+
+  .admission-process-page .scene-mini {
+    width: 34%;
+    height: 140px;
+  }
+
+  .admission-process-page .chip-b {
+    right: 5%;
+    top: 69%;
+  }
+
+  .admission-process-page .process-timeline-track {
+    gap: 24px;
+    padding-left: 38px;
+  }
+
+  .admission-process-page .process-timeline-track::before {
+    left: 16px;
+    transform: none;
+  }
+
+  .admission-process-page .timeline-flow-item,
+  .admission-process-page .timeline-flow-item:nth-child(odd),
+  .admission-process-page .timeline-flow-item:nth-child(even) {
+    width: 100%;
+    align-self: stretch;
+    text-align: left;
+  }
+
+  .admission-process-page .timeline-flow-item:nth-child(odd) .timeline-flow-content,
+  .admission-process-page .timeline-flow-item:nth-child(even) .timeline-flow-content {
+    justify-items: start;
+  }
+
+  .admission-process-page .timeline-flow-item:nth-child(odd) .timeline-node,
+  .admission-process-page .timeline-flow-item:nth-child(even) .timeline-node {
+    left: -36px;
+    right: auto;
+  }
+
+  .admission-process-page .timeline-flow-item:nth-child(odd)::after,
+  .admission-process-page .timeline-flow-item:nth-child(even)::after {
+    left: -26px;
+    right: auto;
+    width: 26px;
+  }
+
+  .admission-process-page .timeline-flow-copy {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .admission-process-page .section-head {
+    margin-bottom: 20px;
+  }
+
+  .admission-process-page .section-head p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .admission-process-page .admission-hero-shell {
+    border-radius: 22px;
+    padding: 16px 14px;
+  }
+
+  .admission-process-page .admission-hero-copy h1 {
+    font-size: clamp(30px, 8.2vw, 42px);
+  }
+
+  .admission-process-page .admission-btn {
+    width: 100%;
+  }
+
+  .admission-process-page .admission-hero-scene {
+    min-height: 360px;
+  }
+
+  .admission-process-page .scene-main {
+    width: 72%;
+    height: 248px;
+    right: 0;
+    top: 10px;
+  }
+
+  .admission-process-page .scene-mini {
+    width: 42%;
+    height: 120px;
+  }
+
+  .admission-process-page .scene-mini-a {
+    top: 50px;
+  }
+
+  .admission-process-page .scene-mini-b {
+    left: 18%;
+    bottom: 0;
+  }
+
+  .admission-process-page .hero-chip {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .admission-process-page .chip-a {
+    left: 30%;
+  }
+
+  .admission-process-page .chip-b {
+    right: 0;
+    top: 67%;
+  }
+
+  .admission-process-page .chip-c {
+    left: 2%;
+  }
+
+  .admission-process-page .timeline-flow-copy h3 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .admission-process-page .timeline-flow-copy p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .admission-process-page .timeline-flow-media {
+    width: 100%;
+  }
+
+  .admission-process-page .eligibility-shell {
+    border-radius: 18px;
+    padding: 12px;
+  }
+
+  .admission-process-page .eligibility-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .admission-process-page .eligibility-row h3 {
+    font-size: clamp(24px, 8vw, 30px);
+    width: 100%;
+  }
+
+  .admission-process-page .eligibility-age-pills {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .admission-process-page .age-pill {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admission-process-page .admission-hero {
+    padding: 52px 0 62px;
+  }
+
+  .admission-process-page .admission-hero-copy h1 {
+    font-size: clamp(28px, 9vw, 36px);
+  }
+
+  .admission-process-page .admission-hero-points li {
+    font-size: 14px;
+  }
+
+  .admission-process-page .admission-hero-scene {
+    min-height: 328px;
+  }
+
+  .admission-process-page .scene-main {
+    width: 74%;
+    height: 220px;
+  }
+
+  .admission-process-page .scene-mini {
+    height: 104px;
+  }
+
+  .admission-process-page .hero-chip {
+    font-size: 11px;
+  }
+
+  .admission-process-page .process-timeline-track {
+    padding-left: 30px;
+  }
+
+  .admission-process-page .process-timeline-track::before {
+    left: 12px;
+  }
+
+  .admission-process-page .timeline-flow-item:nth-child(odd) .timeline-node,
+  .admission-process-page .timeline-flow-item:nth-child(even) .timeline-node {
+    left: -30px;
+  }
+
+  .admission-process-page .timeline-flow-item:nth-child(odd)::after,
+  .admission-process-page .timeline-flow-item:nth-child(even)::after {
+    left: -20px;
+    width: 20px;
+  }
+
+  .admission-process-page .age-pill strong {
+    font-size: 14px;
+  }
+}

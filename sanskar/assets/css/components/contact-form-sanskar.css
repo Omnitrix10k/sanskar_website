@@ -2,23 +2,23 @@
 # Sanskar Contact Form Section
 --------------------------------------------------------------*/
 .sanskar-contact {
-  --contact-bg-1: #fff9ef;
-  --contact-bg-2: #ffefdb;
+  --contact-bg-1: #fff8ee;
+  --contact-bg-2: #ffefd9;
   --contact-ink: #2b1808;
   --contact-muted: rgba(43, 24, 8, 0.74);
-  --contact-shell-1: #ff8f2f;
-  --contact-shell-2: #ffb03b;
-  --contact-shell-3: #ffd24d;
-  --contact-input-bg: rgba(255, 251, 244, 0.9);
-  --contact-input-border: rgba(255, 176, 85, 0.44);
-  --contact-btn-1: #ff9d1f;
-  --contact-btn-2: #ffc635;
+  --contact-shell-1: #ff8e27;
+  --contact-shell-2: #ffae36;
+  --contact-shell-3: #ffd04d;
+  --contact-input-bg: rgba(255, 254, 250, 0.94);
+  --contact-input-border: rgba(255, 174, 83, 0.44);
+  --contact-btn-1: #ff7e12;
+  --contact-btn-2: #ffc43f;
   position: relative;
   overflow: hidden;
-  padding: 84px 0;
+  padding: 72px 0;
   background:
-    radial-gradient(circle at 8% 16%, rgba(255, 195, 124, 0.3) 0%, rgba(255, 195, 124, 0) 44%),
-    radial-gradient(circle at 94% 84%, rgba(255, 133, 34, 0.22) 0%, rgba(255, 133, 34, 0) 48%),
+    radial-gradient(circle at 8% 16%, rgba(255, 198, 131, 0.28) 0%, rgba(255, 198, 131, 0) 44%),
+    radial-gradient(circle at 94% 84%, rgba(255, 133, 34, 0.18) 0%, rgba(255, 133, 34, 0) 48%),
     linear-gradient(180deg, var(--contact-bg-1) 0%, var(--contact-bg-2) 100%);
 }
 
@@ -31,20 +31,20 @@
 }
 
 .sanskar-contact::before {
-  width: 290px;
-  height: 290px;
-  left: -126px;
-  top: 40px;
-  background: radial-gradient(circle, rgba(255, 185, 90, 0.28) 0%, rgba(255, 185, 90, 0) 72%);
+  width: 280px;
+  height: 280px;
+  left: -118px;
+  top: 30px;
+  background: radial-gradient(circle, rgba(255, 186, 96, 0.24) 0%, rgba(255, 186, 96, 0) 72%);
   animation: contactOrbFloat 9.4s ease-in-out infinite;
 }
 
 .sanskar-contact::after {
-  width: 360px;
-  height: 360px;
-  right: -130px;
-  bottom: -54px;
-  background: radial-gradient(circle, rgba(255, 122, 28, 0.2) 0%, rgba(255, 122, 28, 0) 72%);
+  width: 340px;
+  height: 340px;
+  right: -120px;
+  bottom: -44px;
+  background: radial-gradient(circle, rgba(255, 122, 28, 0.16) 0%, rgba(255, 122, 28, 0) 72%);
   animation: contactOrbFloat 10.4s ease-in-out infinite reverse;
 }
 
@@ -56,11 +56,11 @@
 .sanskar-contact .contact-admission-shell {
   position: relative;
   overflow: hidden;
-  border-radius: 34px;
-  padding: clamp(24px, 3.2vw, 42px);
+  border-radius: 30px;
+  padding: clamp(22px, 3vw, 36px);
   border: 1px solid rgba(255, 199, 125, 0.5);
-  background: linear-gradient(126deg, var(--contact-shell-1) 0%, var(--contact-shell-2) 52%, var(--contact-shell-3) 100%);
-  box-shadow: 0 24px 52px rgba(78, 36, 4, 0.18);
+  background: linear-gradient(126deg, var(--contact-shell-1) 0%, var(--contact-shell-2) 50%, var(--contact-shell-3) 100%);
+  box-shadow: 0 20px 44px rgba(78, 36, 4, 0.14);
 }
 
 .sanskar-contact .contact-admission-shell::before {
@@ -68,8 +68,8 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(255, 252, 248, 0.24) 0%, rgba(255, 252, 248, 0.08) 34%, rgba(255, 252, 248, 0) 62%),
-    radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 44%);
+    linear-gradient(180deg, rgba(255, 252, 248, 0.22) 0%, rgba(255, 252, 248, 0.08) 34%, rgba(255, 252, 248, 0) 62%),
+    radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 46%);
   pointer-events: none;
 }
 
@@ -94,8 +94,8 @@
   right: -50px;
   top: -52px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 238, 208, 0.42);
-  background: radial-gradient(circle, rgba(255, 238, 208, 0.22) 0%, rgba(255, 238, 208, 0) 72%);
+  border: 1px solid rgba(255, 238, 208, 0.3);
+  background: radial-gradient(circle, rgba(255, 238, 208, 0.18) 0%, rgba(255, 238, 208, 0) 72%);
   animation: contactShapePulse 7.2s ease-in-out infinite;
 }
 
@@ -105,7 +105,7 @@
   left: -30px;
   bottom: 20%;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(255, 227, 184, 0.28) 0%, rgba(255, 227, 184, 0) 72%);
+  background: radial-gradient(circle, rgba(255, 227, 184, 0.2) 0%, rgba(255, 227, 184, 0) 72%);
   animation: contactShapePulse 8.8s ease-in-out infinite reverse;
 }
 
@@ -115,7 +115,7 @@
   right: 16%;
   bottom: 18px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255, 238, 208, 0.24) 0%, rgba(255, 238, 208, 0) 100%);
+  background: linear-gradient(90deg, rgba(255, 238, 208, 0.18) 0%, rgba(255, 238, 208, 0) 100%);
   filter: blur(1px);
   animation: contactShapeSlide 9s ease-in-out infinite;
 }
@@ -127,8 +127,8 @@
   top: 20px;
   border-radius: 999px;
   background:
-    radial-gradient(circle, rgba(255, 244, 222, 0.78) 2px, transparent 3px) 0 0 / 14px 14px,
-    rgba(255, 209, 139, 0.18);
+    radial-gradient(circle, rgba(255, 246, 228, 0.74) 2px, transparent 3px) 0 0 / 14px 14px,
+    rgba(255, 209, 139, 0.14);
   animation: contactShapeFloat 8.6s ease-in-out infinite;
 }
 
@@ -138,7 +138,7 @@
   right: 24%;
   top: 18%;
   border-radius: 42% 58% 56% 44% / 42% 44% 56% 58%;
-  background: linear-gradient(140deg, rgba(255, 246, 229, 0.3) 0%, rgba(255, 204, 126, 0.18) 100%);
+  background: linear-gradient(140deg, rgba(255, 246, 229, 0.22) 0%, rgba(255, 204, 126, 0.14) 100%);
   animation: contactBlobMorph 9.2s ease-in-out infinite;
 }
 
@@ -146,29 +146,33 @@
   position: relative;
   z-index: 3;
   max-width: 760px;
-  margin: 0 auto 20px;
+  margin: 0 auto 18px;
   text-align: center;
   color: var(--contact-ink);
 }
 
 .sanskar-contact .contact-shell-head .eyebrow {
   margin: 0;
-  font-size: clamp(18px, 1.8vw, 30px);
-  font-weight: 600;
-  line-height: 1.28;
-  letter-spacing: 0.02em;
+  font-size: clamp(17px, 1.55vw, 24px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
 }
 
 .sanskar-contact .contact-shell-head h2 {
   margin: 8px 0 0;
-  font-size: clamp(38px, 4.2vw, 62px);
-  line-height: 1.06;
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.08;
   letter-spacing: -0.02em;
 }
 
 .sanskar-contact .contact-enquiry-form {
   position: relative;
   z-index: 3;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 233, 201, 0.42);
+  background: linear-gradient(180deg, rgba(255, 252, 247, 0.1) 0%, rgba(255, 240, 215, 0.04) 100%);
+  padding: clamp(14px, 2vw, 20px);
 }
 
 .sanskar-contact .contact-grid {
@@ -179,14 +183,44 @@
 
 .sanskar-contact .field-group {
   display: grid;
-  gap: 7px;
+  gap: 8px;
+}
+
+.sanskar-contact .field-group-wide {
+  grid-column: 1 / -1;
 }
 
 .sanskar-contact .field-group label {
-  color: #4f2907;
-  font-size: 13px;
+  color: #4d2808;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sanskar-contact .field-group-phone .phone-input-wrap {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 10px;
+}
+
+.sanskar-contact .field-group-phone .phone-prefix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid var(--contact-input-border);
+  background: linear-gradient(180deg, rgba(255, 250, 242, 0.95) 0%, rgba(255, 241, 220, 0.88) 100%);
+  color: #6f390b;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 8px 14px rgba(72, 34, 4, 0.08);
+}
+
+.sanskar-contact .field-group-phone .phone-input-wrap:focus-within .phone-prefix {
+  border-color: rgba(255, 126, 25, 0.76);
+  box-shadow: 0 0 0 4px rgba(255, 196, 114, 0.24), 0 10px 18px rgba(72, 34, 4, 0.12);
 }
 
 .sanskar-contact .split-parent-fields {
@@ -197,14 +231,14 @@
 
 .sanskar-contact .field-group .form-control,
 .sanskar-contact .field-group .form-select {
-  min-height: 58px;
-  border-radius: 14px;
+  min-height: 56px;
+  border-radius: 12px;
   border: 1px solid var(--contact-input-border);
   background: var(--contact-input-bg);
   color: #321c0c;
   font-size: 16px;
   padding: 12px 15px;
-  box-shadow: 0 8px 14px rgba(72, 34, 4, 0.09);
+  box-shadow: 0 8px 14px rgba(72, 34, 4, 0.08);
   transition: border-color 260ms ease, box-shadow 260ms ease, transform 260ms ease;
 }
 
@@ -217,10 +251,14 @@
   resize: vertical;
 }
 
+.sanskar-contact .field-group-message textarea.form-control {
+  min-height: 120px;
+}
+
 .sanskar-contact .field-group .form-control:focus,
 .sanskar-contact .field-group .form-select:focus {
-  border-color: rgba(255, 126, 25, 0.72);
-  box-shadow: 0 0 0 4px rgba(255, 195, 112, 0.2), 0 12px 20px rgba(72, 34, 4, 0.14);
+  border-color: rgba(255, 126, 25, 0.76);
+  box-shadow: 0 0 0 4px rgba(255, 196, 114, 0.24), 0 10px 18px rgba(72, 34, 4, 0.12);
   transform: translateY(-1px);
 }
 
@@ -231,15 +269,15 @@
 
 .sanskar-contact .field-group.field-submit button {
   width: 100%;
-  min-height: 60px;
+  min-height: 58px;
   border: 0;
-  border-radius: 15px;
+  border-radius: 14px;
   color: #3b1e06;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.01em;
   background: linear-gradient(90deg, var(--contact-btn-1) 0%, var(--contact-btn-2) 100%);
-  box-shadow: 0 16px 28px rgba(72, 34, 4, 0.24);
+  box-shadow: 0 14px 26px rgba(72, 34, 4, 0.2);
   transition: transform 300ms ease, box-shadow 300ms ease, filter 300ms ease;
 }
 
@@ -250,7 +288,7 @@
 
 .sanskar-contact .field-group.field-submit button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 22px 34px rgba(72, 34, 4, 0.28);
+  box-shadow: 0 18px 32px rgba(72, 34, 4, 0.24);
   filter: saturate(1.06);
 }
 
@@ -291,11 +329,11 @@
 
 @media (max-width: 1199px) {
   .sanskar-contact {
-    padding: 74px 0;
+    padding: 64px 0;
   }
 
   .sanskar-contact .contact-admission-shell {
-    border-radius: 28px;
+    border-radius: 24px;
   }
 
   .sanskar-contact .admission-shape.shape-4,
@@ -310,7 +348,7 @@
   }
 
   .sanskar-contact .contact-shell-head h2 {
-    font-size: clamp(34px, 6.6vw, 50px);
+    font-size: clamp(32px, 6.6vw, 46px);
   }
 
   .sanskar-contact .contact-grid {
@@ -325,12 +363,17 @@
 
 @media (max-width: 767px) {
   .sanskar-contact {
-    padding: 60px 0;
+    padding: 54px 0;
   }
 
   .sanskar-contact .contact-admission-shell {
-    border-radius: 22px;
+    border-radius: 20px;
     padding: 20px 14px;
+  }
+
+  .sanskar-contact .contact-enquiry-form {
+    border-radius: 14px;
+    padding: 12px;
   }
 
   .sanskar-contact .admission-shape.shape-1 {
@@ -349,15 +392,20 @@
   }
 
   .sanskar-contact .contact-shell-head .eyebrow {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .sanskar-contact .contact-shell-head h2 {
-    font-size: clamp(30px, 9vw, 42px);
+    font-size: clamp(28px, 8.6vw, 40px);
   }
 
   .sanskar-contact .split-parent-fields {
     grid-template-columns: 1fr;
+  }
+
+  .sanskar-contact .field-group-phone .phone-input-wrap {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 8px;
   }
 
   .sanskar-contact .field-group .form-control,

@@ -1,0 +1,615 @@
+/*--------------------------------------------------------------
+# Upcoming Events Program Page (Unique Design)
+--------------------------------------------------------------*/
+.upcoming-events-program-page {
+  --ue-bg: #fff4e6;
+  --ue-ink: #2a1708;
+  --ue-text: rgba(44, 28, 14, 0.8);
+  --ue-muted: rgba(56, 38, 20, 0.66);
+  --ue-line: rgba(255, 165, 62, 0.34);
+  --ue-surface: rgba(255, 255, 255, 0.88);
+  --ue-surface-strong: rgba(255, 255, 255, 0.95);
+  --ue-grad-main: linear-gradient(120deg, #ff6a00 0%, #ff9933 52%, #ffd84d 100%);
+  background: var(--ue-bg);
+}
+
+.upcoming-events-program-page .events-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 154, 40, 0.36);
+  background: rgba(255, 250, 241, 0.9);
+  color: #b96000;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+.upcoming-events-program-page .events-hero {
+  position: relative;
+  padding: 76px 0 84px;
+  background:
+    radial-gradient(circle at 8% 16%, rgba(255, 195, 118, 0.25) 0%, rgba(255, 195, 118, 0) 44%),
+    radial-gradient(circle at 92% 88%, rgba(255, 126, 17, 0.16) 0%, rgba(255, 126, 17, 0) 48%),
+    var(--ue-bg);
+}
+
+.upcoming-events-program-page .events-hero-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 1px solid var(--ue-line);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 244, 225, 0.76) 100%);
+  box-shadow: 0 24px 42px rgba(66, 33, 5, 0.12);
+  padding: clamp(20px, 2.8vw, 34px);
+}
+
+.upcoming-events-program-page .events-hero-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--ue-grad-main);
+  opacity: 0.86;
+}
+
+.upcoming-events-program-page .events-hero-shape {
+  position: absolute;
+  pointer-events: none;
+}
+
+.upcoming-events-program-page .events-hero-shape.shape-a {
+  width: 170px;
+  height: 170px;
+  right: -45px;
+  top: -56px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 172, 79, 0.36);
+  box-shadow: inset 0 0 0 20px rgba(255, 214, 148, 0.2);
+}
+
+.upcoming-events-program-page .events-hero-shape.shape-b {
+  width: 124px;
+  height: 124px;
+  left: -38px;
+  bottom: -34px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 143, 24, 0.82) 2px, transparent 3px) 0 0 / 11px 11px,
+    rgba(255, 207, 133, 0.2);
+}
+
+.upcoming-events-program-page .events-hero-shape.shape-c {
+  width: 240px;
+  height: 66px;
+  right: 14%;
+  bottom: -14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 220, 168, 0.36) 0%, rgba(255, 220, 168, 0) 100%);
+  filter: blur(1px);
+}
+
+.upcoming-events-program-page .events-hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.upcoming-events-program-page .events-hero-copy h1 {
+  margin: 14px 0 12px;
+  color: var(--ue-ink);
+  font-size: clamp(34px, 4.7vw, 62px);
+  line-height: 1.08;
+}
+
+.upcoming-events-program-page .events-hero-copy p {
+  margin: 0;
+  color: var(--ue-text);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.upcoming-events-program-page .events-hero-points {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.upcoming-events-program-page .events-hero-points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ue-muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.upcoming-events-program-page .events-hero-points i {
+  color: #ff7d11;
+}
+
+.upcoming-events-program-page .events-hero-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.upcoming-events-program-page .events-btn {
+  min-height: 48px;
+  border-radius: 999px;
+  padding: 11px 20px;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease, background-color 300ms ease, color 300ms ease;
+}
+
+.upcoming-events-program-page .events-btn-primary {
+  color: #fffdf7;
+  background: var(--ue-grad-main);
+  box-shadow: 0 14px 24px rgba(255, 122, 14, 0.28);
+}
+
+.upcoming-events-program-page .events-btn-primary:hover {
+  color: #fffdf7;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 30px rgba(255, 122, 14, 0.36);
+}
+
+.upcoming-events-program-page .events-btn-ghost {
+  color: #8a4609;
+  border-color: rgba(255, 147, 31, 0.38);
+  background: rgba(255, 250, 241, 0.88);
+}
+
+.upcoming-events-program-page .events-btn-ghost:hover {
+  color: #8a4609;
+  transform: translateY(-2px);
+  border-color: rgba(255, 138, 22, 0.5);
+}
+
+.upcoming-events-program-page .events-hero-panel {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 165, 62, 0.34);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 246, 229, 0.8) 100%);
+  padding: 18px;
+  box-shadow: 0 16px 30px rgba(66, 33, 5, 0.1);
+}
+
+.upcoming-events-program-page .events-hero-panel h2 {
+  margin: 0;
+  color: #2b1708;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.upcoming-events-program-page .events-hero-panel p {
+  margin: 8px 0 12px;
+  color: var(--ue-muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.upcoming-events-program-page .events-hero-timeline {
+  display: grid;
+  gap: 10px;
+}
+
+.upcoming-events-program-page .events-hero-timeline article {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 168, 74, 0.3);
+  background: rgba(255, 255, 255, 0.78);
+  padding: 10px 12px;
+}
+
+.upcoming-events-program-page .events-hero-timeline span {
+  display: block;
+  color: #a75806;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.upcoming-events-program-page .events-hero-timeline strong {
+  display: block;
+  margin-top: 4px;
+  color: #3a220e;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/*--------------------------------------------------------------
+# Shared Heads
+--------------------------------------------------------------*/
+.upcoming-events-program-page .events-section-head {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.upcoming-events-program-page .events-section-head h2 {
+  margin: 14px auto 0;
+  color: var(--ue-ink);
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.12;
+  max-width: 860px;
+}
+
+.upcoming-events-program-page .events-section-head-left {
+  text-align: left;
+}
+
+.upcoming-events-program-page .events-section-head-left h2 {
+  margin-left: 0;
+}
+
+/*--------------------------------------------------------------
+# Calendar Grid
+--------------------------------------------------------------*/
+.upcoming-events-program-page .events-calendar {
+  padding: 8px 0 84px;
+}
+
+.upcoming-events-program-page .events-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.upcoming-events-program-page .calendar-card {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 168, 74, 0.32);
+  background: var(--ue-surface-strong);
+  box-shadow: 0 16px 30px rgba(66, 33, 5, 0.1);
+  padding: 16px;
+  transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.upcoming-events-program-page .calendar-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 145, 28, 0.5);
+  box-shadow: 0 22px 36px rgba(66, 33, 5, 0.14);
+}
+
+.upcoming-events-program-page .calendar-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.upcoming-events-program-page .calendar-card-head h3 {
+  margin: 0;
+  color: #301a09;
+  font-size: 23px;
+  line-height: 1.1;
+}
+
+.upcoming-events-program-page .calendar-card-head span {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 168, 74, 0.35);
+  background: rgba(255, 244, 225, 0.8);
+  color: #9a4d00;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.upcoming-events-program-page .calendar-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.upcoming-events-program-page .calendar-card li {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 8px;
+  color: #5a3210;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.upcoming-events-program-page .calendar-card li i {
+  color: #ff8114;
+}
+
+/*--------------------------------------------------------------
+# Showcase
+--------------------------------------------------------------*/
+.upcoming-events-program-page .events-showcase {
+  padding: 0 0 84px;
+}
+
+.upcoming-events-program-page .showcase-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 168, 74, 0.34);
+  background: #fff;
+  box-shadow: 0 18px 34px rgba(66, 33, 5, 0.12);
+}
+
+.upcoming-events-program-page .showcase-card figure {
+  margin: 0;
+  height: 100%;
+}
+
+.upcoming-events-program-page .showcase-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 460ms ease;
+}
+
+.upcoming-events-program-page .showcase-card:hover img {
+  transform: scale(1.08);
+}
+
+.upcoming-events-program-page .showcase-card::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 66%;
+  background: linear-gradient(180deg, rgba(29, 18, 10, 0) 0%, rgba(29, 18, 10, 0.82) 100%);
+  pointer-events: none;
+}
+
+.upcoming-events-program-page .showcase-card-lg {
+  min-height: 430px;
+}
+
+.upcoming-events-program-page .showcase-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.upcoming-events-program-page .showcase-card-sm {
+  min-height: 206px;
+}
+
+.upcoming-events-program-page .showcase-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 16px;
+}
+
+.upcoming-events-program-page .showcase-content span {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 215, 165, 0.42);
+  background: rgba(44, 22, 6, 0.48);
+  color: #ffe8ca;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.upcoming-events-program-page .showcase-content h3 {
+  margin: 10px 0 0;
+  color: #fff9f1;
+  font-size: 34px;
+  line-height: 1.12;
+}
+
+.upcoming-events-program-page .showcase-card-sm .showcase-content h3 {
+  font-size: 24px;
+}
+
+.upcoming-events-program-page .showcase-content p {
+  margin: 8px 0 0;
+  color: rgba(255, 247, 235, 0.92);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/*--------------------------------------------------------------
+# Participation
+--------------------------------------------------------------*/
+.upcoming-events-program-page .events-participation {
+  padding: 0 0 84px;
+}
+
+.upcoming-events-program-page .participation-shell {
+  border-radius: 28px;
+  border: 1px solid rgba(255, 168, 74, 0.34);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 244, 225, 0.8) 100%);
+  box-shadow: 0 22px 40px rgba(66, 33, 5, 0.1);
+  padding: clamp(20px, 2.8vw, 34px);
+}
+
+.upcoming-events-program-page .participation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.upcoming-events-program-page .participation-card {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 168, 74, 0.32);
+  background: rgba(255, 255, 255, 0.82);
+  padding: 14px;
+}
+
+.upcoming-events-program-page .participation-card .step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  min-height: 28px;
+  border-radius: 999px;
+  background: var(--ue-grad-main);
+  color: #fff8ef;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.upcoming-events-program-page .participation-card h3 {
+  margin: 10px 0 8px;
+  color: #2e1909;
+  font-size: 24px;
+  line-height: 1.16;
+}
+
+.upcoming-events-program-page .participation-card p {
+  margin: 0;
+  color: var(--ue-text);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.upcoming-events-program-page .participation-meta {
+  border-radius: 18px;
+  border: 1px solid rgba(255, 165, 62, 0.34);
+  background: rgba(255, 255, 255, 0.84);
+  padding: 16px;
+}
+
+.upcoming-events-program-page .participation-meta h3 {
+  margin: 0;
+  color: #2b1708;
+  font-size: 27px;
+}
+
+.upcoming-events-program-page .participation-meta ul {
+  margin: 12px 0 16px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.upcoming-events-program-page .participation-meta li {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 8px;
+  color: #5a3210;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.upcoming-events-program-page .participation-meta li i {
+  color: #ff8215;
+}
+
+.upcoming-events-program-page .participation-meta .events-btn {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 1199px) {
+  .upcoming-events-program-page .events-hero-copy p {
+    font-size: 17px;
+  }
+
+  .upcoming-events-program-page .events-calendar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .upcoming-events-program-page .participation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .upcoming-events-program-page .events-hero {
+    padding: 62px 0 70px;
+  }
+
+  .upcoming-events-program-page .showcase-card-lg {
+    min-height: 360px;
+  }
+
+  .upcoming-events-program-page .showcase-card-sm {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .upcoming-events-program-page .events-hero {
+    padding: 54px 0 60px;
+  }
+
+  .upcoming-events-program-page .events-hero-shell {
+    border-radius: 22px;
+    padding: 16px;
+  }
+
+  .upcoming-events-program-page .events-hero-copy h1 {
+    font-size: clamp(30px, 9vw, 44px);
+  }
+
+  .upcoming-events-program-page .events-hero-copy p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .upcoming-events-program-page .events-btn {
+    width: 100%;
+  }
+
+  .upcoming-events-program-page .events-calendar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upcoming-events-program-page .events-section-head h2 {
+    font-size: clamp(29px, 8vw, 39px);
+  }
+
+  .upcoming-events-program-page .showcase-card-lg,
+  .upcoming-events-program-page .showcase-card-sm {
+    min-height: 250px;
+  }
+
+  .upcoming-events-program-page .showcase-content h3,
+  .upcoming-events-program-page .showcase-card-sm .showcase-content h3 {
+    font-size: 22px;
+  }
+
+  .upcoming-events-program-page .participation-shell {
+    border-radius: 20px;
+    padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .upcoming-events-program-page *,
+  .upcoming-events-program-page *::before,
+  .upcoming-events-program-page *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

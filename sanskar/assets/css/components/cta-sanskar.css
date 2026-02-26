@@ -21,6 +21,10 @@
   overflow: hidden;
 }
 
+.sanskar-cta .cta-stage > .row {
+  align-items: flex-end !important;
+}
+
 .sanskar-cta .cta-stage::before {
   content: "";
   position: absolute;
@@ -100,19 +104,22 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding-right: clamp(6px, 1vw, 18px);
+  padding-right: 0;
+  padding-top: 0;
   z-index: 2;
 }
 
 .sanskar-cta .cta-student-image {
   position: relative;
   z-index: 3;
-  width: min(100%, 540px);
-  height: 400px;
+  width: min(100%, 660px);
+  height: auto;
+  max-height: 520px;
   object-fit: cover;
   object-position: bottom center;
-  top: 40px;
+  top: 38px;
   left: 45px;
+  margin-bottom: -4px;
   filter: drop-shadow(0 20px 34px rgba(44, 21, 2, 0.26));
   animation: ctaStudentFloat 6.6s ease-in-out infinite;
 }
@@ -182,7 +189,8 @@
   }
 
   .sanskar-cta .cta-student-image {
-    width: min(100%, 470px);
+    width: min(100%, 600px);
+    max-height: 490px;
   }
 }
 
@@ -201,13 +209,14 @@
   }
 
   .sanskar-cta .cta-visual {
-    min-height: 295px;
+    min-height: 300px;
     margin-top: 2px;
-    padding-right: 4px;
+    justify-content: center;
   }
 
   .sanskar-cta .cta-student-image {
-    width: min(100%, 410px);
+    width: min(100%, 540px);
+    max-height: 430px;
   }
 
   .sanskar-cta .cta-shape-ring {
@@ -255,13 +264,14 @@
   }
 
   .sanskar-cta .cta-visual {
-    min-height: 250px;
+    min-height: 270px;
     justify-content: center;
-    padding-right: 0;
   }
 
   .sanskar-cta .cta-student-image {
-    width: min(100%, 350px);
+    width: min(100%, 450px);
+    max-height: 370px;
+    animation-duration: 7.4s;
   }
 
   .sanskar-cta .cta-shape-ring {
@@ -297,6 +307,18 @@
     width: 150px;
     height: 54px;
     left: 6%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sanskar-cta .cta-visual {
+    min-height: 240px;
+  }
+
+  .sanskar-cta .cta-student-image {
+    width: min(100%, 390px);
+    max-height: 325px;
+    bottom: -4px;
   }
 }
 

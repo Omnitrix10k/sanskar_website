@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Apply Now - Sanskar Innovative School</title>
+  <meta name="description" content="Apply online for admission at Sanskar Innovative School with student details and document uploads.">
+  <meta name="keywords" content="Sanskar apply now, school admission form, online school application">
+
+  <link href="assets/img/logo.svg" rel="icon">
+  <link href="assets/img/logo.svg" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css?v=20260225d" rel="stylesheet">
+  <link href="assets/css/components/header.css?v=20260224j" rel="stylesheet">
+  <link href="assets/css/components/footer.css?v=20260226g" rel="stylesheet">
+  <link href="assets/css/components/apply-now-page.css?v=20260226a" rel="stylesheet">
+</head>
+
+<body class="apply-now-page">
+
+  <div id="header-placeholder"></div>
+
+  <main class="main">
+
+    <section class="apply-hero section" id="apply-now-top">
+      <div class="container">
+        <div class="apply-hero-shell" data-aos="fade-up" data-aos-delay="80">
+          <span class="apply-shape shape-ring"></span>
+          <span class="apply-shape shape-dots"></span>
+          <span class="apply-shape shape-orb"></span>
+
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7" data-aos="fade-right" data-aos-delay="110">
+              <span class="apply-tag">Admissions 2026-27</span>
+              <h1>Apply Online</h1>
+              <p>
+                Submit your child admission application with complete student details, parent information and
+                required document uploads in one structured form.
+              </p>
+            </div>
+            <div class="col-lg-5" data-aos="fade-left" data-aos-delay="140">
+              <figure class="apply-hero-media">
+                <img src="assets/img/education/students-7.webp" alt="Student admission registration at Sanskar">
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="apply-form-section section" id="apply-form">
+      <div class="container">
+        <div class="apply-form-shell" data-aos="fade-up" data-aos-delay="100">
+          <form action="forms/contact.php" method="post" enctype="multipart/form-data" class="php-email-form js-dynamic-php-form admission-extended-form">
+            <input type="hidden" name="subject" value="Online Admission Application - Website">
+            <input type="hidden" name="message" value="Submitted from Apply Now page.">
+
+            <div class="apply-group" data-aos="fade-up" data-aos-delay="120">
+              <h2><i class="bi bi-person-badge"></i> Student Information</h2>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="student-name">Student Full Name</label>
+                  <input id="student-name" type="text" name="child_name" class="form-control" placeholder="Enter student name" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="student-dob">Date of Birth</label>
+                  <input id="student-dob" type="date" name="student_dob" class="form-control" required>
+                </div>
+                <div class="col-md-3">
+                  <label for="student-gender">Gender</label>
+                  <select id="student-gender" name="student_gender" class="form-select" required>
+                    <option value="" selected disabled>Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label for="class-applying">Class Applying For</label>
+                  <select id="class-applying" name="class_applying" class="form-select" required>
+                    <option value="" selected disabled>Select class</option>
+                    <option>Pre-Primary</option>
+                    <option>Class I</option>
+                    <option>Class II</option>
+                    <option>Class III</option>
+                    <option>Class IV</option>
+                    <option>Class V</option>
+                    <option>Class VI</option>
+                    <option>Class VII</option>
+                    <option>Class VIII</option>
+                    <option>Class IX</option>
+                    <option>Class X</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label for="apar-id">APAR ID</label>
+                  <input id="apar-id" type="text" name="apar_id" class="form-control" placeholder="Enter APAR ID (if issued)">
+                </div>
+                <div class="col-md-4">
+                  <label for="pen-id">PEN ID</label>
+                  <input id="pen-id" type="text" name="pen_id" class="form-control" placeholder="Enter PEN ID (if issued)">
+                </div>
+              </div>
+            </div>
+
+            <div class="apply-group" data-aos="fade-up" data-aos-delay="150">
+              <h2><i class="bi bi-people-fill"></i> Parent / Guardian Information</h2>
+              <div class="row g-3">
+                <div class="col-md-3">
+                  <label for="relation">Relation</label>
+                  <select id="relation" name="relation" class="form-select" required>
+                    <option value="" selected disabled>Select relation</option>
+                    <option>Father</option>
+                    <option>Mother</option>
+                    <option>Guardian</option>
+                  </select>
+                </div>
+                <div class="col-md-5">
+                  <label for="parent-name">Parent / Guardian Name</label>
+                  <input id="parent-name" type="text" name="name" class="form-control" placeholder="Enter parent / guardian name" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="parent-phone">Phone Number</label>
+                  <input id="parent-phone" type="tel" name="phone" class="form-control" placeholder="+91 98765 43210" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="parent-email">Email ID</label>
+                  <input id="parent-email" type="email" name="email" class="form-control" placeholder="parent@example.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="alternate-phone">Alternate Contact Number</label>
+                  <input id="alternate-phone" type="tel" name="alternate_phone" class="form-control" placeholder="+91 9XXXXXXXXX">
+                </div>
+                <div class="col-12">
+                  <label for="address">Residential Address</label>
+                  <textarea id="address" name="address" class="form-control" rows="3" placeholder="Enter complete residential address" required></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="apply-group" data-aos="fade-up" data-aos-delay="180">
+              <h2><i class="bi bi-journal-check"></i> Academic Background</h2>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="previous-school">Previous School Name</label>
+                  <input id="previous-school" type="text" name="previous_school" class="form-control" placeholder="Enter previous school name">
+                </div>
+                <div class="col-md-4">
+                  <label for="last-class">Last Class Studied</label>
+                  <input id="last-class" type="text" name="last_class_studied" class="form-control" placeholder="Example: Class IV">
+                </div>
+                <div class="col-md-4">
+                  <label for="previous-board">Previous Board</label>
+                  <input id="previous-board" type="text" name="previous_board" class="form-control" placeholder="CBSE / State / ICSE">
+                </div>
+              </div>
+            </div>
+
+            <div class="apply-group" data-aos="fade-up" data-aos-delay="210">
+              <h2><i class="bi bi-folder2-open"></i> Upload Documents</h2>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label for="student-photo">Student Photo</label>
+                  <input id="student-photo" type="file" name="student_photo" class="form-control" accept=".jpg,.jpeg,.png,.webp">
+                </div>
+                <div class="col-md-4">
+                  <label for="birth-certificate">Birth Certificate</label>
+                  <input id="birth-certificate" type="file" name="birth_certificate" class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+                <div class="col-md-4">
+                  <label for="transfer-certificate">Transfer Certificate</label>
+                  <input id="transfer-certificate" type="file" name="transfer_certificate" class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+                <div class="col-md-4">
+                  <label for="report-card">Latest Report Card</label>
+                  <input id="report-card" type="file" name="latest_report_card" class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+                <div class="col-md-4">
+                  <label for="address-proof">Address Proof</label>
+                  <input id="address-proof" type="file" name="address_proof" class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+                <div class="col-md-4">
+                  <label for="parent-id-proof">Parent ID Proof</label>
+                  <input id="parent-id-proof" type="file" name="parent_id_proof" class="form-control" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+              </div>
+            </div>
+
+            <div class="apply-group" data-aos="fade-up" data-aos-delay="240">
+              <h2><i class="bi bi-chat-square-text"></i> Additional Information</h2>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="additional-info">Parent Notes / Additional Information</label>
+                  <textarea id="additional-info" name="additional_information" class="form-control" rows="4" placeholder="Share any health details, support requirements, sibling details or other notes."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="apply-consent" data-aos="fade-up" data-aos-delay="260">
+              <label class="form-check">
+                <input type="checkbox" class="form-check-input" required>
+                <span>I confirm that the submitted details and documents are accurate to the best of my knowledge.</span>
+              </label>
+            </div>
+
+            <div class="apply-submit" data-aos="fade-up" data-aos-delay="280">
+              <button type="submit">Submit Application <i class="bi bi-arrow-right"></i></button>
+            </div>
+
+            <div class="form-feedback">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Application submitted successfully. Our admission team will contact you shortly.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="cta-placeholder"></div>
+  <div id="contact-form-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-shell">
+      <div class="preloader-orbit preloader-orbit-a"></div>
+      <div class="preloader-orbit preloader-orbit-b"></div>
+      <div class="preloader-core">
+        <img class="preloader-brand-logo" src="assets/img/logo.svg" alt="Sanskar logo">
+        <span class="preloader-pulse"></span>
+      </div>
+      <p class="preloader-title">Sanskar</p>
+      <p class="preloader-subtitle">Preparing Your Future</p>
+      <div class="preloader-track"><span class="preloader-progress"></span></div>
+    </div>
+  </div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js?v=20260226a"></script>
+
+</body>
+
+</html>
