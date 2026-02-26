@@ -1,0 +1,661 @@
+/*--------------------------------------------------------------
+# Sanskar CTA Section
+--------------------------------------------------------------*/
+.sanskar-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 72px;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(255, 203, 130, 0.24) 0%, rgba(255, 203, 130, 0) 44%),
+    radial-gradient(circle at 90% 86%, rgba(255, 140, 28, 0.18) 0%, rgba(255, 140, 28, 0) 46%),
+    #fff6e9;
+}
+
+.sanskar-cta .cta-stage {
+  position: relative;
+  padding: clamp(20px, 2.4vw, 34px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 193, 121, 0.36);
+  background: linear-gradient(120deg, #ff6a00 0%, #ff9933 52%, #ffd84d 100%);
+  box-shadow: 0 24px 56px rgba(83, 38, 2, 0.24);
+  overflow: hidden;
+}
+
+.sanskar-cta .cta-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.08) 32%, rgba(255, 255, 255, 0) 62%),
+    radial-gradient(circle at 18% 86%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 48%);
+  pointer-events: none;
+}
+
+.sanskar-cta .cta-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+}
+
+.sanskar-cta .cta-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 13px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 245, 226, 0.78);
+  color: #fff8ee;
+  background: rgba(90, 40, 0, 0.24);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.sanskar-cta .cta-copy h2 {
+  margin: 0;
+  color: #fffaf3;
+  font-size: clamp(32px, 3.6vw, 50px);
+  line-height: 1.08;
+}
+
+.sanskar-cta .cta-copy p {
+  margin: 14px 0 22px;
+  color: rgba(255, 249, 240, 0.95);
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.sanskar-cta .cta-main-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 247, 229, 0.74);
+  color: #4f2500;
+  text-decoration: none;
+  background: linear-gradient(90deg, #ffe9c0 0%, #fff3da 100%);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 12px 28px rgba(76, 35, 1, 0.24);
+  transition: transform 300ms ease, box-shadow 300ms ease, filter 300ms ease;
+}
+
+.sanskar-cta .cta-main-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(76, 35, 1, 0.3);
+  filter: saturate(1.04);
+  color: #472100;
+}
+
+.sanskar-cta .cta-main-btn i {
+  font-size: 14px;
+}
+
+.sanskar-cta .cta-visual {
+  position: relative;
+  min-height: 370px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: clamp(6px, 1vw, 18px);
+  z-index: 2;
+}
+
+.sanskar-cta .cta-student-image {
+  position: relative;
+  z-index: 3;
+  width: min(100%, 540px);
+  height: 400px;
+  object-fit: cover;
+  object-position: bottom center;
+  top: 40px;
+  left: 45px;
+  filter: drop-shadow(0 20px 34px rgba(44, 21, 2, 0.26));
+  animation: ctaStudentFloat 6.6s ease-in-out infinite;
+}
+
+.sanskar-cta .cta-shape {
+  position: absolute;
+  pointer-events: none;
+}
+
+.sanskar-cta .cta-shape-ring {
+  width: 240px;
+  height: 240px;
+  right: 20%;
+  top: 6%;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 241, 212, 0.62);
+  box-shadow: inset 0 0 0 14px rgba(255, 220, 166, 0.2);
+  animation: ctaShapeSpin 17s linear infinite;
+}
+
+.sanskar-cta .cta-shape-orb {
+  width: 108px;
+  height: 108px;
+  right: 4%;
+  top: 26%;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.58) 0%, rgba(255, 208, 118, 0.48) 62%, rgba(255, 173, 75, 0.15) 100%);
+  animation: ctaShapeFloat 5.8s ease-in-out infinite;
+}
+
+.sanskar-cta .cta-shape-dot {
+  width: 140px;
+  height: 140px;
+  left: 8%;
+  bottom: 20%;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 244, 219, 0.88) 2px, transparent 3px) 0 0 / 12px 12px,
+    rgba(255, 214, 139, 0.2);
+  animation: ctaShapeFloat 7.2s ease-in-out infinite reverse;
+}
+
+.sanskar-cta .cta-shape-blob {
+  width: 164px;
+  height: 164px;
+  right: 30%;
+  bottom: 12%;
+  border-radius: 44% 56% 58% 42% / 40% 50% 50% 60%;
+  background: linear-gradient(130deg, rgba(255, 241, 211, 0.46) 0%, rgba(255, 194, 103, 0.24) 100%);
+  animation: ctaBlobMorph 8.8s ease-in-out infinite;
+}
+
+.sanskar-cta .cta-shape-wave {
+  width: 300px;
+  height: 78px;
+  left: 2%;
+  bottom: 12%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 239, 206, 0.24) 0%, rgba(255, 239, 206, 0) 80%);
+  filter: blur(1px);
+  animation: ctaWaveMove 7.2s ease-in-out infinite;
+}
+
+@media (max-width: 1199px) {
+  .sanskar-cta .cta-visual {
+    min-height: 330px;
+  }
+
+  .sanskar-cta .cta-student-image {
+    width: min(100%, 470px);
+  }
+}
+
+@media (max-width: 991px) {
+  .sanskar-cta {
+    padding: 56px 0 64px;
+  }
+
+  .sanskar-cta .cta-copy h2 {
+    font-size: clamp(30px, 7.1vw, 44px);
+  }
+
+  .sanskar-cta .cta-copy p {
+    font-size: 15px;
+    max-width: 96%;
+  }
+
+  .sanskar-cta .cta-visual {
+    min-height: 295px;
+    margin-top: 2px;
+    padding-right: 4px;
+  }
+
+  .sanskar-cta .cta-student-image {
+    width: min(100%, 410px);
+  }
+
+  .sanskar-cta .cta-shape-ring {
+    width: 195px;
+    height: 195px;
+    right: 22%;
+    top: 4%;
+  }
+
+  .sanskar-cta .cta-shape-wave {
+    width: 200px;
+    left: 8%;
+  }
+}
+
+@media (max-width: 767px) {
+  .sanskar-cta {
+    padding: 50px 0 56px;
+  }
+
+  .sanskar-cta .cta-stage {
+    border-radius: 22px;
+    padding: 18px 14px;
+  }
+
+  .sanskar-cta .cta-tag {
+    font-size: 11px;
+  }
+
+  .sanskar-cta .cta-copy h2 {
+    font-size: clamp(28px, 8.4vw, 39px);
+  }
+
+  .sanskar-cta .cta-copy p {
+    margin: 12px 0 18px;
+    font-size: 14px;
+    line-height: 1.56;
+  }
+
+  .sanskar-cta .cta-main-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .sanskar-cta .cta-visual {
+    min-height: 250px;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .sanskar-cta .cta-student-image {
+    width: min(100%, 350px);
+  }
+
+  .sanskar-cta .cta-shape-ring {
+    width: 152px;
+    height: 152px;
+    right: 18%;
+    top: 10%;
+    border-width: 1.5px;
+  }
+
+  .sanskar-cta .cta-shape-orb {
+    width: 72px;
+    height: 72px;
+    right: 7%;
+    top: 22%;
+  }
+
+  .sanskar-cta .cta-shape-dot {
+    width: 102px;
+    height: 102px;
+    left: 2%;
+    bottom: 28px;
+  }
+
+  .sanskar-cta .cta-shape-blob {
+    width: 118px;
+    height: 118px;
+    right: 24%;
+    bottom: 16px;
+  }
+
+  .sanskar-cta .cta-shape-wave {
+    width: 150px;
+    height: 54px;
+    left: 6%;
+  }
+}
+
+@keyframes ctaStudentFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-11px);
+  }
+}
+
+@keyframes ctaShapeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes ctaShapeSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ctaBlobMorph {
+  0%,
+  100% {
+    border-radius: 44% 56% 58% 42% / 40% 50% 50% 60%;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    border-radius: 58% 42% 36% 64% / 58% 46% 54% 42%;
+    transform: translateY(-8px) rotate(6deg);
+  }
+}
+
+@keyframes ctaWaveMove {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+/*--------------------------------------------------------------
+# CTA Popup Enquiry Modal
+--------------------------------------------------------------*/
+.cta-enquiry-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: clamp(14px, 2.5vw, 26px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 320ms ease, visibility 320ms ease;
+}
+
+.cta-enquiry-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.cta-enquiry-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(255, 177, 86, 0.26) 0%, rgba(255, 177, 86, 0) 44%),
+    radial-gradient(circle at 82% 90%, rgba(255, 107, 18, 0.22) 0%, rgba(255, 107, 18, 0) 50%),
+    rgba(28, 16, 7, 0.62);
+  backdrop-filter: blur(3px);
+}
+
+.cta-enquiry-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(680px, 100%);
+  border-radius: 28px;
+  padding: clamp(22px, 3vw, 32px);
+  border: 1px solid rgba(255, 218, 164, 0.52);
+  background: linear-gradient(140deg, #fff6e8 0%, #ffe9c8 46%, #ffd78f 100%);
+  box-shadow: 0 32px 68px rgba(32, 17, 6, 0.34);
+  overflow: hidden;
+  transform: translateY(20px) scale(0.97);
+  transition: transform 320ms ease;
+}
+
+.cta-enquiry-modal.is-open .cta-enquiry-modal__panel {
+  transform: translateY(0) scale(1);
+}
+
+.cta-enquiry-modal__close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(123, 61, 8, 0.24);
+  border-radius: 12px;
+  color: #6a3408;
+  background: rgba(255, 247, 233, 0.78);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 280ms ease, background-color 280ms ease;
+}
+
+.cta-enquiry-modal__close:hover {
+  transform: translateY(-1px);
+  background: #fff8ed;
+}
+
+.cta-enquiry-modal__shape {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cta-enquiry-modal__shape.shape-a {
+  width: 170px;
+  height: 170px;
+  right: -34px;
+  top: -36px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 184, 99, 0.46);
+  background: radial-gradient(circle, rgba(255, 204, 141, 0.44) 0%, rgba(255, 204, 141, 0) 74%);
+  animation: ctaShapeFloat 7s ease-in-out infinite;
+}
+
+.cta-enquiry-modal__shape.shape-b {
+  width: 118px;
+  height: 118px;
+  left: -26px;
+  bottom: -20px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 165, 70, 0.3) 0%, rgba(255, 165, 70, 0) 72%);
+  animation: ctaShapeFloat 8s ease-in-out infinite reverse;
+}
+
+.cta-enquiry-modal__shape.shape-c {
+  width: 170px;
+  height: 46px;
+  right: 12%;
+  bottom: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 185, 92, 0.2) 0%, rgba(255, 185, 92, 0) 100%);
+  animation: ctaWaveMove 6.8s ease-in-out infinite;
+}
+
+.cta-enquiry-modal__header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 18px;
+  padding-right: 42px;
+}
+
+.cta-enquiry-modal__eyebrow {
+  margin: 0;
+  color: rgba(82, 41, 7, 0.82);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cta-enquiry-modal__header h3 {
+  margin: 6px 0 6px;
+  color: #3a1f07;
+  font-size: clamp(26px, 3.8vw, 38px);
+  line-height: 1.1;
+}
+
+.cta-enquiry-modal__header p {
+  margin: 0;
+  color: rgba(58, 31, 7, 0.78);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.cta-popup-form {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-popup-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.cta-popup-form__field {
+  display: grid;
+  gap: 7px;
+}
+
+.cta-popup-form__field--full {
+  grid-column: 1 / -1;
+}
+
+.cta-popup-form__field label {
+  color: #5b2e06;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.cta-popup-form__field .form-control,
+.cta-popup-form__field .form-select {
+  min-height: 56px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 188, 110, 0.38);
+  background: rgba(255, 250, 241, 0.88);
+  color: #35200f;
+  padding: 10px 14px;
+  font-size: 15px;
+  box-shadow: 0 10px 18px rgba(91, 48, 8, 0.08);
+  transition: border-color 280ms ease, box-shadow 280ms ease, transform 280ms ease;
+}
+
+.cta-popup-form__field .form-control::placeholder {
+  color: rgba(53, 32, 15, 0.5);
+}
+
+.cta-popup-form__field .form-control:focus,
+.cta-popup-form__field .form-select:focus {
+  border-color: rgba(255, 129, 25, 0.72);
+  box-shadow: 0 0 0 4px rgba(255, 180, 93, 0.22), 0 14px 20px rgba(91, 48, 8, 0.14);
+  transform: translateY(-1px);
+}
+
+.cta-popup-form__submit {
+  width: 100%;
+  min-height: 56px;
+  margin-top: 16px;
+  border: 0;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #412103;
+  background: linear-gradient(90deg, #ffb629 0%, #ffd94d 100%);
+  box-shadow: 0 14px 30px rgba(91, 44, 5, 0.26);
+  transition: transform 300ms ease, box-shadow 300ms ease, filter 300ms ease;
+}
+
+.cta-popup-form__submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 36px rgba(91, 44, 5, 0.3);
+  filter: saturate(1.06);
+}
+
+.cta-popup-form__submit i {
+  font-size: 14px;
+}
+
+.cta-popup-form__feedback {
+  margin-top: 12px;
+}
+
+.cta-popup-form .loading,
+.cta-popup-form .error-message,
+.cta-popup-form .sent-message {
+  display: none;
+  border-radius: 10px;
+  padding: 9px 11px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.cta-popup-form .loading.d-block,
+.cta-popup-form .error-message.d-block,
+.cta-popup-form .sent-message.d-block {
+  display: block !important;
+}
+
+.cta-popup-form .loading {
+  background: rgba(255, 179, 80, 0.28);
+  color: #5d2f0b;
+}
+
+.cta-popup-form .error-message {
+  background: rgba(198, 45, 23, 0.2);
+  color: #742315;
+}
+
+.cta-popup-form .sent-message {
+  background: rgba(40, 162, 95, 0.2);
+  color: #0c5c34;
+}
+
+body.cta-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .cta-enquiry-modal {
+    padding: 10px;
+  }
+
+  .cta-enquiry-modal__panel {
+    border-radius: 20px;
+    padding: 18px 14px;
+  }
+
+  .cta-enquiry-modal__header {
+    margin-bottom: 14px;
+    padding-right: 38px;
+  }
+
+  .cta-enquiry-modal__header p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .cta-popup-form__grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .cta-popup-form__field .form-control,
+  .cta-popup-form__field .form-select,
+  .cta-popup-form__submit {
+    min-height: 52px;
+    border-radius: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sanskar-cta *,
+  .sanskar-cta *::before,
+  .sanskar-cta *::after,
+  .cta-enquiry-modal *,
+  .cta-enquiry-modal *::before,
+  .cta-enquiry-modal *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

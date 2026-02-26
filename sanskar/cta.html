@@ -1,0 +1,96 @@
+<section id="sanskar-cta" class="sanskar-cta section">
+  <div class="container">
+    <div class="cta-stage" data-aos="fade-up" data-aos-delay="90">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <div class="cta-copy" data-aos="fade-right" data-aos-delay="130">
+            <span class="cta-tag">Admissions Open 2026-27</span>
+            <h2>Ready to unlock your child's full potential at Sanskar?</h2>
+            <p>Join a future-focused school where moral values, modern learning and vibrant campus life shape confident leaders of tomorrow.</p>
+            <a href="contact.html#home-contact" class="cta-main-btn" data-open-cta-modal>
+              Book a Campus Visit
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="cta-visual" data-aos="fade-left" data-aos-delay="170">
+            <span class="cta-shape cta-shape-ring"></span>
+            <span class="cta-shape cta-shape-orb"></span>
+            <span class="cta-shape cta-shape-dot"></span>
+            <span class="cta-shape cta-shape-blob"></span>
+            <span class="cta-shape cta-shape-wave"></span>
+            <img src="assets/img/happy-indian-student-modern-schoolgirl-wearing-school-uniform-holding-books-bag-generative-ai.png" alt="Sanskar student" class="cta-student-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="cta-enquiry-modal" class="cta-enquiry-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cta-modal-title">
+  <div class="cta-enquiry-modal__backdrop" data-close-cta-modal></div>
+  <div class="cta-enquiry-modal__panel" role="document">
+    <button type="button" class="cta-enquiry-modal__close" data-close-cta-modal aria-label="Close enquiry form">
+      <i class="bi bi-x-lg"></i>
+    </button>
+
+    <span class="cta-enquiry-modal__shape shape-a"></span>
+    <span class="cta-enquiry-modal__shape shape-b"></span>
+    <span class="cta-enquiry-modal__shape shape-c"></span>
+
+    <div class="cta-enquiry-modal__header">
+      <p class="cta-enquiry-modal__eyebrow">Quick Admission Enquiry</p>
+      <h3 id="cta-modal-title">Book Your Campus Visit</h3>
+      <p>Share a few details and our admissions team will contact you shortly.</p>
+    </div>
+
+    <form action="forms/contact.php" method="post" class="php-email-form js-dynamic-php-form cta-popup-form">
+      <input type="hidden" name="subject" value="CTA Quick Enquiry - Website">
+      <input type="hidden" name="email" value="quickenquiry@sanskarinnovativeschool.in">
+      <input type="hidden" name="message" value="Submitted from CTA popup form.">
+
+      <div class="cta-popup-form__grid">
+        <div class="cta-popup-form__field">
+          <label for="cta-enquiry-name">Parent / Guardian Name</label>
+          <input type="text" id="cta-enquiry-name" name="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+
+        <div class="cta-popup-form__field">
+          <label for="cta-enquiry-phone">Phone Number</label>
+          <input type="tel" id="cta-enquiry-phone" name="phone" class="form-control" placeholder="+91 9876543210" required>
+        </div>
+
+        <div class="cta-popup-form__field cta-popup-form__field--full">
+          <label for="cta-enquiry-grade">Grade Applying For</label>
+          <select id="cta-enquiry-grade" name="class_applying" class="form-select" required>
+            <option value="" selected disabled>Select grade</option>
+            <option value="Pre-Primary">Pre-Primary</option>
+            <option value="Grade 1">Grade 1</option>
+            <option value="Grade 2">Grade 2</option>
+            <option value="Grade 3">Grade 3</option>
+            <option value="Grade 4">Grade 4</option>
+            <option value="Grade 5">Grade 5</option>
+            <option value="Grade 6">Grade 6</option>
+            <option value="Grade 7">Grade 7</option>
+            <option value="Grade 8">Grade 8</option>
+            <option value="Grade 9">Grade 9</option>
+            <option value="Grade 10">Grade 10</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="cta-popup-form__submit">
+        Submit Enquiry
+        <i class="bi bi-arrow-right"></i>
+      </button>
+
+      <div class="cta-popup-form__feedback">
+        <div class="loading">Loading</div>
+        <div class="error-message"></div>
+        <div class="sent-message">Thanks! Our admissions team will call you soon.</div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,401 @@
+/*--------------------------------------------------------------
+# Why Choose Us Section (Sanskar)
+--------------------------------------------------------------*/
+.why-sanskar {
+  --why-bg-1: #fff7ea;
+  --why-bg-2: #ffefd8;
+  --why-ink: #271a0d;
+  --why-muted: rgba(39, 26, 13, 0.74);
+  --why-accent-1: #ff7a0a;
+  --why-accent-2: #ffb33c;
+  --why-accent-3: #ffd46b;
+  --why-border: rgba(255, 162, 56, 0.34);
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0;
+  background:
+    radial-gradient(circle at 10% 18%, rgba(255, 202, 130, 0.28) 0%, rgba(255, 202, 130, 0) 44%),
+    radial-gradient(circle at 85% 82%, rgba(255, 146, 36, 0.2) 0%, rgba(255, 146, 36, 0) 46%),
+    linear-gradient(180deg, var(--why-bg-1) 0%, var(--why-bg-2) 100%);
+}
+
+.why-sanskar::before,
+.why-sanskar::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.why-sanskar::before {
+  width: 270px;
+  height: 270px;
+  left: -100px;
+  top: 34px;
+  background: radial-gradient(circle, rgba(255, 166, 62, 0.28) 0%, rgba(255, 166, 62, 0) 72%);
+  animation: whyAmbientFloat 10s ease-in-out infinite;
+}
+
+.why-sanskar::after {
+  width: 330px;
+  height: 330px;
+  right: -120px;
+  bottom: -30px;
+  background: radial-gradient(circle, rgba(255, 132, 22, 0.22) 0%, rgba(255, 132, 22, 0) 72%);
+  animation: whyAmbientFloat 11s ease-in-out infinite reverse;
+}
+
+.why-sanskar .container {
+  position: relative;
+  z-index: 1;
+}
+
+.why-sanskar .why-header {
+  max-width: 760px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.why-sanskar .why-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  color: #bb5f00;
+  border: 1px solid rgba(255, 144, 40, 0.4);
+  background: rgba(255, 251, 244, 0.92);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.why-sanskar .why-header h2 {
+  margin: 15px 0 12px;
+  color: var(--why-ink);
+  font-size: clamp(31px, 3.2vw, 46px);
+  line-height: 1.14;
+}
+
+.why-sanskar .why-header p {
+  margin: 0 auto;
+  max-width: 700px;
+  color: var(--why-muted);
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.why-sanskar .why-card-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.why-sanskar .why-card-grid::before {
+  content: "";
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 45%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 167, 64, 0) 0%, rgba(255, 167, 64, 0.5) 22%, rgba(255, 167, 64, 0.5) 78%, rgba(255, 167, 64, 0) 100%);
+  pointer-events: none;
+}
+
+.why-sanskar .why-vision-card {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 247, 233, 0.96) 100%);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 22px 44px rgba(72, 35, 2, 0.12);
+  transition: transform 360ms ease, box-shadow 360ms ease, filter 360ms ease;
+}
+
+.why-sanskar .why-vision-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(140deg, rgba(255, 145, 34, 0.72) 0%, rgba(255, 208, 120, 0.62) 52%, rgba(255, 145, 34, 0.72) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.why-sanskar .why-vision-card::after {
+  content: "";
+  position: absolute;
+  top: -48%;
+  left: -56%;
+  width: 46%;
+  height: 190%;
+  transform: rotate(18deg);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.45) 50%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+.why-sanskar .why-vision-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 56px rgba(72, 35, 2, 0.18);
+  filter: saturate(1.04);
+}
+
+.why-sanskar .why-vision-card:hover::after {
+  opacity: 1;
+  animation: whyCardShine 1s ease;
+}
+
+.why-sanskar .why-vision-card:nth-child(2) {
+  transform: translateY(16px);
+}
+
+.why-sanskar .why-vision-card:nth-child(2):hover {
+  transform: translateY(4px);
+}
+
+.why-sanskar .why-media-wrap {
+  margin: 0;
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 28px 28px 22px 22px;
+}
+
+.why-sanskar .why-media-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(30, 18, 8, 0.04) 28%, rgba(30, 18, 8, 0.54) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.why-sanskar .why-media-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+  transition: transform 480ms ease;
+}
+
+.why-sanskar .why-vision-card:hover .why-media-wrap img {
+  transform: scale(1.08);
+}
+
+.why-sanskar .why-media-chip {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #fffaf2;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: linear-gradient(90deg, rgba(255, 124, 10, 0.95) 0%, rgba(255, 179, 60, 0.95) 100%);
+  box-shadow: 0 10px 20px rgba(41, 22, 4, 0.22);
+}
+
+.why-sanskar .why-media-chip i {
+  font-size: 14px;
+}
+
+.why-sanskar .why-card-copy {
+  position: relative;
+  padding: 24px 24px 25px;
+}
+
+.why-sanskar .why-card-copy h3 {
+  margin: 0 0 12px;
+  color: #26190c;
+  font-size: clamp(30px, 2vw, 44px);
+  line-height: 1.06;
+  letter-spacing: 0.003em;
+}
+
+.why-sanskar .why-card-copy p {
+  margin: 0 0 16px;
+  color: rgba(38, 25, 12, 0.74);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.why-sanskar .why-mini-points {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.why-sanskar .why-mini-points li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #563317;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.why-sanskar .why-mini-points li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex: 0 0 auto;
+  background: linear-gradient(140deg, var(--why-accent-1) 0%, var(--why-accent-2) 60%, var(--why-accent-3) 100%);
+  box-shadow: 0 0 0 4px rgba(255, 168, 68, 0.22);
+  transform: rotate(45deg);
+}
+
+.why-sanskar .why-vision-card:nth-child(1),
+.why-sanskar .why-vision-card:nth-child(3) {
+  animation: whyCardFloat 8s ease-in-out infinite;
+}
+
+.why-sanskar .why-vision-card:nth-child(3) {
+  animation-delay: 480ms;
+}
+
+@media (max-width: 1399px) {
+  .why-sanskar .why-media-wrap {
+    height: 238px;
+  }
+
+  .why-sanskar .why-card-copy h3 {
+    font-size: clamp(27px, 2vw, 38px);
+  }
+}
+
+@media (max-width: 1199px) {
+  .why-sanskar {
+    padding: 78px 0;
+  }
+
+  .why-sanskar .why-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .why-sanskar .why-card-grid::before {
+    display: none;
+  }
+
+  .why-sanskar .why-vision-card:nth-child(2) {
+    transform: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-sanskar {
+    padding: 62px 0;
+  }
+
+  .why-sanskar .why-header {
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .why-sanskar .why-header h2 {
+    font-size: 34px;
+  }
+
+  .why-sanskar .why-header p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .why-sanskar .why-card-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .why-sanskar .why-media-wrap {
+    height: 218px;
+  }
+
+  .why-sanskar .why-card-copy {
+    padding: 18px 16px 18px;
+  }
+
+  .why-sanskar .why-card-copy h3 {
+    font-size: 26px;
+    margin-bottom: 9px;
+  }
+
+  .why-sanskar .why-card-copy p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .why-sanskar .why-mini-points li {
+    font-size: 12.8px;
+  }
+
+  .why-sanskar .why-vision-card:nth-child(1),
+  .why-sanskar .why-vision-card:nth-child(3) {
+    animation: none;
+  }
+}
+
+@keyframes whyAmbientFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes whyCardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes whyCardShine {
+  from {
+    left: -56%;
+  }
+
+  to {
+    left: 126%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .why-sanskar *,
+  .why-sanskar *::before,
+  .why-sanskar *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

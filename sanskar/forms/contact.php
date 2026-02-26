@@ -18,10 +18,14 @@
   $contact = new PHP_Email_Form;
   $contact->ajax = true;
   
+  $from_name = isset($_POST['name']) && trim($_POST['name']) !== '' ? trim($_POST['name']) : 'Website Enquiry';
+  $from_email = isset($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ? $_POST['email'] : 'quickenquiry@sanskarinnovativeschool.in';
+  $subject = isset($_POST['subject']) && trim($_POST['subject']) !== '' ? trim($_POST['subject']) : 'Website Enquiry';
+
   $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+  $contact->from_name = $from_name;
+  $contact->from_email = $from_email;
+  $contact->subject = $subject;
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
   /*
@@ -33,10 +37,13 @@
   );
   */
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
+  $contact->add_message($from_name, 'Parent/Guardian Name');
+  isset($_POST['child_name']) && $contact->add_message($_POST['child_name'], 'Child Name');
+  isset($_POST['relation']) && $contact->add_message($_POST['relation'], 'Relation');
+  isset($_POST['class_applying']) && $contact->add_message($_POST['class_applying'], 'Class Applying For');
+  $contact->add_message(isset($_POST['email']) && trim($_POST['email']) !== '' ? $_POST['email'] : 'Not provided', 'Email');
   isset($_POST['phone']) && $contact->add_message($_POST['phone'], 'Phone');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+  $contact->add_message(isset($_POST['message']) && trim($_POST['message']) !== '' ? $_POST['message'] : 'Not provided', 'Message', 10);
 
   echo $contact->send();
 ?>

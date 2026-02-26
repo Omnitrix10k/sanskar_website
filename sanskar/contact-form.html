@@ -1,0 +1,83 @@
+<section id="home-contact" class="sanskar-contact section">
+  <div class="container">
+    <div class="contact-admission-shell" data-aos="fade-up" data-aos-delay="80">
+      <span class="admission-shape shape-1"></span>
+      <span class="admission-shape shape-2"></span>
+      <span class="admission-shape shape-3"></span>
+      <span class="admission-shape shape-4"></span>
+      <span class="admission-shape shape-5"></span>
+
+      <div class="contact-shell-head">
+        <p class="eyebrow">Admission Open for 2026-27</p>
+        <h2>Admission Going On!</h2>
+      </div>
+
+      <form action="forms/contact.php" method="post" class="php-email-form js-dynamic-php-form contact-enquiry-form">
+        <input type="hidden" name="subject" value="Admission Enquiry - Website">
+
+        <div class="contact-grid">
+          <div class="field-group" data-aos="fade-up" data-aos-delay="120">
+            <label for="admission-child-name">Child's Name</label>
+            <input type="text" class="form-control" id="admission-child-name" name="child_name" placeholder="Enter Name" required>
+          </div>
+
+          <div class="field-group" data-aos="fade-up" data-aos-delay="140">
+            <label for="admission-parent-name">Parent / Guardian Name</label>
+            <div class="split-parent-fields">
+              <select class="form-select" id="admission-relation" name="relation" required>
+                <option value="" selected disabled>Relation</option>
+                <option value="Father">Father</option>
+                <option value="Mother">Mother</option>
+                <option value="Guardian">Guardian</option>
+              </select>
+              <input type="text" class="form-control" id="admission-parent-name" name="name" placeholder="Enter parent name" required>
+            </div>
+          </div>
+
+          <div class="field-group" data-aos="fade-up" data-aos-delay="160">
+            <label for="admission-email">Email ID</label>
+            <input type="email" class="form-control" id="admission-email" name="email" placeholder="parent@example.com" required>
+          </div>
+
+          <div class="field-group" data-aos="fade-up" data-aos-delay="180">
+            <label for="admission-class">Select Class</label>
+            <select class="form-select" id="admission-class" name="class_applying" required>
+              <option value="" selected disabled>Select class</option>
+              <option value="Pre-Primary">Pre-Primary</option>
+              <option value="Grade 1">Grade 1</option>
+              <option value="Grade 2">Grade 2</option>
+              <option value="Grade 3">Grade 3</option>
+              <option value="Grade 4">Grade 4</option>
+              <option value="Grade 5">Grade 5</option>
+              <option value="Grade 6">Grade 6</option>
+              <option value="Grade 7">Grade 7</option>
+              <option value="Grade 8">Grade 8</option>
+              <option value="Grade 9">Grade 9</option>
+              <option value="Grade 10">Grade 10</option>
+            </select>
+          </div>
+
+          <div class="field-group" data-aos="fade-up" data-aos-delay="200">
+            <label for="admission-phone">Phone Number</label>
+            <input type="tel" class="form-control" id="admission-phone" name="phone" placeholder="9876543210" required>
+          </div>
+
+          <div class="field-group" data-aos="fade-up" data-aos-delay="220">
+            <label for="admission-message">Message</label>
+            <textarea class="form-control" id="admission-message" name="message" placeholder="Enter your message (optional)"></textarea>
+          </div>
+
+          <div class="field-group field-submit" data-aos="fade-up" data-aos-delay="240">
+            <button type="submit">Book Campus Tour <i class="bi bi-arrow-right"></i></button>
+          </div>
+        </div>
+
+        <div class="form-feedback">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your enquiry has been sent. Our team will contact you shortly.</div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

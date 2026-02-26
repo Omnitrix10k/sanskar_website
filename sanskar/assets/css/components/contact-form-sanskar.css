@@ -1,0 +1,449 @@
+/*--------------------------------------------------------------
+# Sanskar Contact Form Section
+--------------------------------------------------------------*/
+.sanskar-contact {
+  --contact-bg-1: #fff9ef;
+  --contact-bg-2: #ffefdb;
+  --contact-ink: #2b1808;
+  --contact-muted: rgba(43, 24, 8, 0.74);
+  --contact-shell-1: #ff8f2f;
+  --contact-shell-2: #ffb03b;
+  --contact-shell-3: #ffd24d;
+  --contact-input-bg: rgba(255, 251, 244, 0.9);
+  --contact-input-border: rgba(255, 176, 85, 0.44);
+  --contact-btn-1: #ff9d1f;
+  --contact-btn-2: #ffc635;
+  position: relative;
+  overflow: hidden;
+  padding: 84px 0;
+  background:
+    radial-gradient(circle at 8% 16%, rgba(255, 195, 124, 0.3) 0%, rgba(255, 195, 124, 0) 44%),
+    radial-gradient(circle at 94% 84%, rgba(255, 133, 34, 0.22) 0%, rgba(255, 133, 34, 0) 48%),
+    linear-gradient(180deg, var(--contact-bg-1) 0%, var(--contact-bg-2) 100%);
+}
+
+.sanskar-contact::before,
+.sanskar-contact::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.sanskar-contact::before {
+  width: 290px;
+  height: 290px;
+  left: -126px;
+  top: 40px;
+  background: radial-gradient(circle, rgba(255, 185, 90, 0.28) 0%, rgba(255, 185, 90, 0) 72%);
+  animation: contactOrbFloat 9.4s ease-in-out infinite;
+}
+
+.sanskar-contact::after {
+  width: 360px;
+  height: 360px;
+  right: -130px;
+  bottom: -54px;
+  background: radial-gradient(circle, rgba(255, 122, 28, 0.2) 0%, rgba(255, 122, 28, 0) 72%);
+  animation: contactOrbFloat 10.4s ease-in-out infinite reverse;
+}
+
+.sanskar-contact .container {
+  position: relative;
+  z-index: 1;
+}
+
+.sanskar-contact .contact-admission-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 34px;
+  padding: clamp(24px, 3.2vw, 42px);
+  border: 1px solid rgba(255, 199, 125, 0.5);
+  background: linear-gradient(126deg, var(--contact-shell-1) 0%, var(--contact-shell-2) 52%, var(--contact-shell-3) 100%);
+  box-shadow: 0 24px 52px rgba(78, 36, 4, 0.18);
+}
+
+.sanskar-contact .contact-admission-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 248, 0.24) 0%, rgba(255, 252, 248, 0.08) 34%, rgba(255, 252, 248, 0) 62%),
+    radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 44%);
+  pointer-events: none;
+}
+
+.sanskar-contact .contact-admission-shell::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 239, 211, 0.28);
+  pointer-events: none;
+}
+
+.sanskar-contact .admission-shape {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sanskar-contact .admission-shape.shape-1 {
+  width: 176px;
+  height: 176px;
+  right: -50px;
+  top: -52px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 238, 208, 0.42);
+  background: radial-gradient(circle, rgba(255, 238, 208, 0.22) 0%, rgba(255, 238, 208, 0) 72%);
+  animation: contactShapePulse 7.2s ease-in-out infinite;
+}
+
+.sanskar-contact .admission-shape.shape-2 {
+  width: 136px;
+  height: 136px;
+  left: -30px;
+  bottom: 20%;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 227, 184, 0.28) 0%, rgba(255, 227, 184, 0) 72%);
+  animation: contactShapePulse 8.8s ease-in-out infinite reverse;
+}
+
+.sanskar-contact .admission-shape.shape-3 {
+  width: 220px;
+  height: 52px;
+  right: 16%;
+  bottom: 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 238, 208, 0.24) 0%, rgba(255, 238, 208, 0) 100%);
+  filter: blur(1px);
+  animation: contactShapeSlide 9s ease-in-out infinite;
+}
+
+.sanskar-contact .admission-shape.shape-4 {
+  width: 120px;
+  height: 120px;
+  left: 18%;
+  top: 20px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(255, 244, 222, 0.78) 2px, transparent 3px) 0 0 / 14px 14px,
+    rgba(255, 209, 139, 0.18);
+  animation: contactShapeFloat 8.6s ease-in-out infinite;
+}
+
+.sanskar-contact .admission-shape.shape-5 {
+  width: 156px;
+  height: 156px;
+  right: 24%;
+  top: 18%;
+  border-radius: 42% 58% 56% 44% / 42% 44% 56% 58%;
+  background: linear-gradient(140deg, rgba(255, 246, 229, 0.3) 0%, rgba(255, 204, 126, 0.18) 100%);
+  animation: contactBlobMorph 9.2s ease-in-out infinite;
+}
+
+.sanskar-contact .contact-shell-head {
+  position: relative;
+  z-index: 3;
+  max-width: 760px;
+  margin: 0 auto 20px;
+  text-align: center;
+  color: var(--contact-ink);
+}
+
+.sanskar-contact .contact-shell-head .eyebrow {
+  margin: 0;
+  font-size: clamp(18px, 1.8vw, 30px);
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: 0.02em;
+}
+
+.sanskar-contact .contact-shell-head h2 {
+  margin: 8px 0 0;
+  font-size: clamp(38px, 4.2vw, 62px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+.sanskar-contact .contact-enquiry-form {
+  position: relative;
+  z-index: 3;
+}
+
+.sanskar-contact .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 16px;
+}
+
+.sanskar-contact .field-group {
+  display: grid;
+  gap: 7px;
+}
+
+.sanskar-contact .field-group label {
+  color: #4f2907;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.sanskar-contact .split-parent-fields {
+  display: grid;
+  grid-template-columns: minmax(130px, 160px) minmax(0, 1fr);
+  gap: 10px;
+}
+
+.sanskar-contact .field-group .form-control,
+.sanskar-contact .field-group .form-select {
+  min-height: 58px;
+  border-radius: 14px;
+  border: 1px solid var(--contact-input-border);
+  background: var(--contact-input-bg);
+  color: #321c0c;
+  font-size: 16px;
+  padding: 12px 15px;
+  box-shadow: 0 8px 14px rgba(72, 34, 4, 0.09);
+  transition: border-color 260ms ease, box-shadow 260ms ease, transform 260ms ease;
+}
+
+.sanskar-contact .field-group .form-control::placeholder {
+  color: rgba(50, 28, 12, 0.46);
+}
+
+.sanskar-contact .field-group textarea.form-control {
+  min-height: 128px;
+  resize: vertical;
+}
+
+.sanskar-contact .field-group .form-control:focus,
+.sanskar-contact .field-group .form-select:focus {
+  border-color: rgba(255, 126, 25, 0.72);
+  box-shadow: 0 0 0 4px rgba(255, 195, 112, 0.2), 0 12px 20px rgba(72, 34, 4, 0.14);
+  transform: translateY(-1px);
+}
+
+.sanskar-contact .field-group.field-submit {
+  grid-column: 1 / -1;
+  margin-top: 2px;
+}
+
+.sanskar-contact .field-group.field-submit button {
+  width: 100%;
+  min-height: 60px;
+  border: 0;
+  border-radius: 15px;
+  color: #3b1e06;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background: linear-gradient(90deg, var(--contact-btn-1) 0%, var(--contact-btn-2) 100%);
+  box-shadow: 0 16px 28px rgba(72, 34, 4, 0.24);
+  transition: transform 300ms ease, box-shadow 300ms ease, filter 300ms ease;
+}
+
+.sanskar-contact .field-group.field-submit button i {
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.sanskar-contact .field-group.field-submit button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 34px rgba(72, 34, 4, 0.28);
+  filter: saturate(1.06);
+}
+
+.sanskar-contact .form-feedback {
+  margin-top: 12px;
+}
+
+.sanskar-contact .php-email-form .loading,
+.sanskar-contact .php-email-form .error-message,
+.sanskar-contact .php-email-form .sent-message {
+  display: none;
+  border-radius: 10px;
+  margin: 0;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.sanskar-contact .php-email-form .loading.d-block,
+.sanskar-contact .php-email-form .error-message.d-block,
+.sanskar-contact .php-email-form .sent-message.d-block {
+  display: block !important;
+}
+
+.sanskar-contact .php-email-form .loading {
+  background: rgba(255, 188, 102, 0.24);
+  color: #5f350f;
+}
+
+.sanskar-contact .php-email-form .error-message {
+  background: rgba(190, 19, 19, 0.18);
+  color: #7a1d1d;
+}
+
+.sanskar-contact .php-email-form .sent-message {
+  background: rgba(31, 171, 91, 0.2);
+  color: #0e633a;
+}
+
+@media (max-width: 1199px) {
+  .sanskar-contact {
+    padding: 74px 0;
+  }
+
+  .sanskar-contact .contact-admission-shell {
+    border-radius: 28px;
+  }
+
+  .sanskar-contact .admission-shape.shape-4,
+  .sanskar-contact .admission-shape.shape-5 {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .sanskar-contact .contact-shell-head {
+    margin-bottom: 16px;
+  }
+
+  .sanskar-contact .contact-shell-head h2 {
+    font-size: clamp(34px, 6.6vw, 50px);
+  }
+
+  .sanskar-contact .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sanskar-contact .split-parent-fields {
+    grid-template-columns: minmax(120px, 148px) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .sanskar-contact {
+    padding: 60px 0;
+  }
+
+  .sanskar-contact .contact-admission-shell {
+    border-radius: 22px;
+    padding: 20px 14px;
+  }
+
+  .sanskar-contact .admission-shape.shape-1 {
+    width: 124px;
+    height: 124px;
+  }
+
+  .sanskar-contact .admission-shape.shape-2 {
+    width: 92px;
+    height: 92px;
+  }
+
+  .sanskar-contact .admission-shape.shape-3 {
+    width: 128px;
+    right: 8%;
+  }
+
+  .sanskar-contact .contact-shell-head .eyebrow {
+    font-size: 16px;
+  }
+
+  .sanskar-contact .contact-shell-head h2 {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+
+  .sanskar-contact .split-parent-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .sanskar-contact .field-group .form-control,
+  .sanskar-contact .field-group .form-select,
+  .sanskar-contact .field-group.field-submit button {
+    min-height: 54px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
+
+  .sanskar-contact .field-group textarea.form-control {
+    min-height: 118px;
+  }
+
+  .sanskar-contact .field-group.field-submit button {
+    font-size: 17px;
+  }
+}
+
+@keyframes contactOrbFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -14px, 0) scale(1.04);
+  }
+}
+
+@keyframes contactShapePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.58;
+  }
+}
+
+@keyframes contactShapeSlide {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.74;
+  }
+
+  50% {
+    transform: translateX(20px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes contactShapeFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+@keyframes contactBlobMorph {
+  0%,
+  100% {
+    border-radius: 42% 58% 56% 44% / 42% 44% 56% 58%;
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    border-radius: 57% 43% 40% 60% / 55% 48% 52% 45%;
+    transform: translateY(-8px) rotate(6deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sanskar-contact *,
+  .sanskar-contact *::before,
+  .sanskar-contact *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

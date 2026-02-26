@@ -1,0 +1,378 @@
+/*--------------------------------------------------------------
+# Sanskar Footer (Professional + Header-Matched BG)
+--------------------------------------------------------------*/
+.footer.sanskar-footer {
+  --header-hero-bg: #fff4e6;
+  --footer-ink: #4a2606;
+  --footer-muted: rgba(74, 38, 6, 0.74);
+  --footer-line: rgba(255, 166, 66, 0.28);
+  position: relative;
+  overflow: hidden;
+  color: var(--footer-ink);
+  font-size: 14px;
+  background: var(--header-hero-bg);
+}
+
+.footer.sanskar-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 8px;
+  background: linear-gradient(120deg, #ff6a00 0%, #ff9933 52%, #ffd84d 100%);
+  z-index: 2;
+}
+
+.footer.sanskar-footer::after {
+  content: none;
+}
+
+.footer.sanskar-footer .footer-top,
+.footer.sanskar-footer .footer-bottom {
+  position: relative;
+  z-index: 1;
+}
+
+.footer.sanskar-footer .footer-top {
+  padding: 42px 0 22px;
+  background: var(--header-hero-bg);
+}
+
+.footer.sanskar-footer .footer-shell {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.footer.sanskar-footer .footer-card {
+  height: 100%;
+  padding: 10px 6px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.footer.sanskar-footer h4 {
+  margin: 0;
+  color: #3f1f00;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.footer.sanskar-footer .footer-mini-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 166, 66, 0.34);
+  color: #9a4d00;
+  background: rgba(255, 241, 219, 0.78);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.footer.sanskar-footer .footer-brand-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
+.footer.sanskar-footer .footer-brand-card .logo {
+  display: flex !important;
+  align-items: center;
+  width: max-content;
+  margin: 0;
+}
+
+.footer.sanskar-footer .footer-brand-card .logo img {
+  max-height: 68px;
+  width: auto;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.footer.sanskar-footer .footer-brand-card p {
+  margin: 0;
+  color: var(--footer-muted);
+  font-size: 18px;
+  line-height: 1.58;
+  max-width: 95%;
+}
+
+.footer.sanskar-footer .social-links {
+  margin-top: 16px;
+  gap: 9px;
+}
+
+.footer.sanskar-footer .social-links a {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #6a3608;
+  border: 1px solid rgba(255, 168, 74, 0.42);
+  background: rgba(255, 250, 240, 0.9);
+  transition: transform 240ms ease, color 240ms ease, border-color 240ms ease;
+}
+
+.footer.sanskar-footer .social-links a:hover {
+  transform: translateY(-1px);
+  color: #a15100;
+  border-color: rgba(255, 137, 24, 0.62);
+}
+
+.footer.sanskar-footer .footer-links-card {
+  display: grid;
+  gap: 14px;
+}
+
+.footer.sanskar-footer .footer-link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.footer.sanskar-footer .footer-link-list li {
+  padding: 0;
+}
+
+.footer.sanskar-footer .footer-link-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #533010;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 240ms ease, transform 240ms ease;
+}
+
+.footer.sanskar-footer .footer-link-list a::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(145deg, #ff8f16 0%, #ffc94b 100%);
+  box-shadow: 0 0 0 3px rgba(255, 194, 111, 0.2);
+}
+
+.footer.sanskar-footer .footer-link-list a:hover {
+  color: #9f4f00;
+  transform: translateX(3px);
+}
+
+.footer.sanskar-footer .footer-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--footer-line) 0%, rgba(255, 166, 66, 0) 100%);
+}
+
+.footer.sanskar-footer .footer-contact-list {
+  display: grid;
+  gap: 10px;
+}
+
+.footer.sanskar-footer .footer-contact-item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  color: #5e3310;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.footer.sanskar-footer .footer-contact-item i {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff8ef;
+  background: linear-gradient(145deg, #ff8d20 0%, #ffb533 100%);
+  font-size: 12px;
+}
+
+.footer.sanskar-footer .footer-map-card {
+  border: 1px solid rgba(255, 172, 79, 0.3);
+  border-radius: 14px;
+  background: rgba(255, 250, 241, 0.76);
+  padding: 14px;
+}
+
+.footer.sanskar-footer .footer-map-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.footer.sanskar-footer .footer-map-head a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #8f4700;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 166, 66, 0.36);
+  background: rgba(255, 240, 216, 0.7);
+  transition: color 240ms ease, border-color 240ms ease;
+}
+
+.footer.sanskar-footer .footer-map-head a:hover {
+  color: #763b00;
+  border-color: rgba(255, 142, 22, 0.54);
+}
+
+.footer.sanskar-footer .footer-map-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 172, 79, 0.34);
+  background: #fff8eb;
+  min-height: 240px;
+}
+
+.footer.sanskar-footer .footer-map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.footer.sanskar-footer .map-caption {
+  margin: 10px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #6b3a12;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer.sanskar-footer .map-caption i {
+  color: #ff8416;
+}
+
+.footer.sanskar-footer .footer-bottom {
+  border-top: 1px solid var(--footer-line);
+  background: var(--header-hero-bg);
+  padding: 12px 0;
+}
+
+.footer.sanskar-footer .footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.footer.sanskar-footer .footer-bottom p,
+.footer.sanskar-footer .footer-legal a {
+  color: rgba(74, 38, 6, 0.88);
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer.sanskar-footer .footer-legal {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer.sanskar-footer .footer-legal a:hover {
+  color: #9f4f00;
+}
+
+.footer.sanskar-footer .footer-motto {
+  color: #9e5000;
+}
+
+@media (max-width: 1199px) {
+  .footer.sanskar-footer h4 {
+    font-size: 25px;
+  }
+
+  .footer.sanskar-footer .footer-brand-card p,
+  .footer.sanskar-footer .footer-link-list a,
+  .footer.sanskar-footer .footer-contact-item,
+  .footer.sanskar-footer .map-caption {
+    font-size: 16px;
+  }
+
+  .footer.sanskar-footer .footer-bottom p,
+  .footer.sanskar-footer .footer-legal a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer.sanskar-footer .footer-top {
+    padding: 36px 0 18px;
+  }
+
+  .footer.sanskar-footer .footer-map-card {
+    margin-top: 4px;
+  }
+
+  .footer.sanskar-footer .footer-bottom-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer.sanskar-footer h4 {
+    font-size: 22px;
+  }
+
+  .footer.sanskar-footer .footer-brand-card p,
+  .footer.sanskar-footer .footer-link-list a,
+  .footer.sanskar-footer .footer-contact-item,
+  .footer.sanskar-footer .map-caption {
+    font-size: 15px;
+  }
+
+  .footer.sanskar-footer .footer-map-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer.sanskar-footer .footer-map-wrap {
+    min-height: 205px;
+  }
+
+  .footer.sanskar-footer .footer-bottom {
+    padding: 10px 0;
+  }
+
+  .footer.sanskar-footer .footer-bottom-inner {
+    gap: 8px;
+    text-align: center;
+  }
+
+  .footer.sanskar-footer .footer-bottom p,
+  .footer.sanskar-footer .footer-legal a {
+    font-size: 13px;
+  }
+}

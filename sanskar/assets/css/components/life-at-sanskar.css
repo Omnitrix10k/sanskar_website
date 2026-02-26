@@ -1,0 +1,359 @@
+/*--------------------------------------------------------------
+# Life At Sanskar Section
+--------------------------------------------------------------*/
+.life-sanskar {
+  --life-bg-1: #fff7ea;
+  --life-bg-2: #ffefd9;
+  --life-ink: #281a0d;
+  --life-muted: rgba(40, 26, 13, 0.74);
+  --life-accent-1: #ff7908;
+  --life-accent-2: #ffb33d;
+  --life-border: rgba(255, 167, 69, 0.34);
+  position: relative;
+  overflow: hidden;
+  padding: 92px 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 202, 132, 0.32) 0%, rgba(255, 202, 132, 0) 44%),
+    radial-gradient(circle at 88% 82%, rgba(255, 145, 35, 0.2) 0%, rgba(255, 145, 35, 0) 48%),
+    linear-gradient(180deg, var(--life-bg-1) 0%, var(--life-bg-2) 100%);
+}
+
+.life-sanskar::before,
+.life-sanskar::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.life-sanskar::before {
+  width: 320px;
+  height: 320px;
+  left: -120px;
+  top: 36px;
+  background: radial-gradient(circle, rgba(255, 174, 77, 0.28) 0%, rgba(255, 174, 77, 0) 72%);
+  animation: lifeGlowFloat 11s ease-in-out infinite;
+}
+
+.life-sanskar::after {
+  width: 360px;
+  height: 360px;
+  right: -130px;
+  bottom: -34px;
+  background: radial-gradient(circle, rgba(255, 132, 24, 0.24) 0%, rgba(255, 132, 24, 0) 72%);
+  animation: lifeGlowFloat 12s ease-in-out infinite reverse;
+}
+
+.life-sanskar .container {
+  position: relative;
+  z-index: 1;
+}
+
+.life-sanskar .life-header {
+  max-width: 760px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.life-sanskar .life-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 16px;
+  border-radius: 999px;
+  color: #b95f00;
+  border: 1px solid rgba(255, 151, 44, 0.36);
+  background: rgba(255, 251, 244, 0.92);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.life-sanskar .life-header h2 {
+  margin: 15px 0 12px;
+  color: var(--life-ink);
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.14;
+}
+
+.life-sanskar .life-header p {
+  margin: 0 auto;
+  max-width: 700px;
+  color: var(--life-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.life-sanskar .life-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.life-sanskar .life-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  border: 1px solid var(--life-border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 246, 230, 0.94) 100%);
+  box-shadow: 0 22px 46px rgba(73, 34, 2, 0.14);
+  transition: transform 360ms ease, box-shadow 360ms ease, filter 360ms ease;
+}
+
+.life-sanskar .life-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(145deg, rgba(255, 143, 30, 0.75) 0%, rgba(255, 213, 129, 0.62) 50%, rgba(255, 143, 30, 0.75) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.life-sanskar .life-card::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -70%;
+  width: 44%;
+  height: 220%;
+  transform: rotate(18deg);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.42) 50%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+}
+
+.life-sanskar .life-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 58px rgba(73, 34, 2, 0.19);
+  filter: saturate(1.04);
+}
+
+.life-sanskar .life-card:hover::after {
+  opacity: 1;
+  animation: lifeCardSweep 1.05s ease;
+}
+
+.life-sanskar .life-video-shell {
+  position: relative;
+  overflow: hidden;
+  margin: 12px;
+  border-radius: 18px;
+  aspect-ratio: 16 / 10;
+  background: #2b1a0c;
+}
+
+.life-sanskar .life-video-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(33, 18, 6, 0.05) 16%, rgba(33, 18, 6, 0.46) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.life-sanskar .life-video-shell iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  pointer-events: none;
+  filter: saturate(1.15) contrast(1.04);
+  transform: scale(1.07);
+  transform-origin: center;
+}
+
+.life-sanskar .life-card-copy {
+  padding: 4px 18px 24px;
+}
+
+.life-sanskar .life-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.life-sanskar .life-card-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 157, 55, 0.34);
+  color: #ca7108;
+  background: rgba(255, 173, 78, 0.15);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.life-sanskar .life-card-copy h3 {
+  margin: 12px 0 10px;
+  color: #27190c;
+  font-size: clamp(26px, 1.9vw, 36px);
+  line-height: 1.08;
+}
+
+.life-sanskar .life-card-copy p {
+  margin: 0;
+  color: rgba(39, 25, 12, 0.74);
+  font-size: 15px;
+  line-height: 1.64;
+}
+
+.life-sanskar .life-open-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  flex: 0 0 auto;
+  text-decoration: none;
+  transition: transform 260ms ease, filter 260ms ease;
+}
+
+.life-sanskar .life-card:hover .life-open-link {
+  transform: translateY(-1px);
+  filter: saturate(1.06);
+}
+
+.life-sanskar .life-watch-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  color: #fffaf1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: linear-gradient(90deg, var(--life-accent-1) 0%, var(--life-accent-2) 100%);
+  box-shadow: 0 12px 24px rgba(57, 28, 3, 0.28);
+  white-space: nowrap;
+}
+
+.life-sanskar .life-watch-pill i {
+  font-size: 14px;
+}
+
+.life-sanskar .life-card:nth-child(2),
+.life-sanskar .life-card:nth-child(5) {
+  animation: lifeCardFloat 7.8s ease-in-out infinite;
+}
+
+.life-sanskar .life-card:nth-child(3),
+.life-sanskar .life-card:nth-child(6) {
+  animation: lifeCardFloat 8.2s ease-in-out infinite reverse;
+}
+
+@media (max-width: 1199px) {
+  .life-sanskar {
+    padding: 78px 0;
+  }
+
+  .life-sanskar .life-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .life-sanskar {
+    padding: 62px 0;
+  }
+
+  .life-sanskar .life-header {
+    text-align: left;
+    margin: 0 0 22px;
+  }
+
+  .life-sanskar .life-header h2 {
+    font-size: 33px;
+  }
+
+  .life-sanskar .life-header p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.58;
+  }
+
+  .life-sanskar .life-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .life-sanskar .life-card-copy {
+    padding: 2px 14px 16px;
+  }
+
+  .life-sanskar .life-card-copy h3 {
+    font-size: 24px;
+    margin: 10px 0 8px;
+  }
+
+  .life-sanskar .life-card-copy p {
+    font-size: 13.5px;
+    line-height: 1.56;
+  }
+
+  .life-sanskar .life-open-link {
+    margin-left: 0;
+  }
+
+  .life-sanskar .life-meta-row {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .life-sanskar .life-card:nth-child(2),
+  .life-sanskar .life-card:nth-child(5),
+  .life-sanskar .life-card:nth-child(3),
+  .life-sanskar .life-card:nth-child(6) {
+    animation: none;
+  }
+}
+
+@keyframes lifeGlowFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes lifeCardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes lifeCardSweep {
+  from {
+    left: -70%;
+  }
+
+  to {
+    left: 128%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .life-sanskar *,
+  .life-sanskar *::before,
+  .life-sanskar *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

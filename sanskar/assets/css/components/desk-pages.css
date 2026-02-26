@@ -1,0 +1,470 @@
+/*--------------------------------------------------------------
+# Principal / Director Desk Pages
+--------------------------------------------------------------*/
+.desk-page {
+  --desk-bg: #fff4e6;
+  --desk-surface: rgba(255, 255, 255, 0.9);
+  --desk-surface-strong: rgba(255, 255, 255, 0.95);
+  --desk-border: rgba(255, 168, 74, 0.32);
+  --desk-heading: #27180c;
+  --desk-text: rgba(42, 27, 13, 0.78);
+  --desk-grad-main: linear-gradient(135deg, #ff6a00 0%, #ff9933 52%, #ffd84d 100%);
+  --desk-grad-soft: linear-gradient(135deg, rgba(255, 106, 0, 0.14) 0%, rgba(255, 171, 65, 0.14) 52%, rgba(255, 216, 77, 0.16) 100%);
+  background: var(--desk-bg);
+}
+
+.desk-page .section-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 155, 43, 0.35);
+  background: rgba(255, 250, 241, 0.86);
+  color: #b85f00;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+# Intro (Text Only)
+--------------------------------------------------------------*/
+.desk-page .desk-intro {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 46px;
+  background:
+    radial-gradient(circle at 8% 14%, rgba(255, 197, 121, 0.24) 0%, rgba(255, 197, 121, 0) 44%),
+    radial-gradient(circle at 94% 88%, rgba(255, 135, 20, 0.16) 0%, rgba(255, 135, 20, 0) 50%),
+    var(--desk-bg);
+}
+
+.desk-page .desk-intro-shell {
+  position: relative;
+  max-width: 1020px;
+  margin: 0 auto;
+  border-radius: 28px;
+  border: 1px solid var(--desk-border);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 248, 235, 0.74) 100%);
+  box-shadow: 0 24px 40px rgba(64, 31, 4, 0.1);
+  text-align: center;
+  padding: clamp(18px, 4vw, 38px) clamp(16px, 4vw, 48px);
+}
+
+.desk-page .desk-intro-shell::before,
+.desk-page .desk-intro-shell::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.desk-page .desk-intro-shell::before {
+  width: 124px;
+  height: 124px;
+  left: -28px;
+  bottom: -30px;
+  background:
+    radial-gradient(circle, rgba(255, 145, 27, 0.82) 1.8px, transparent 2.8px) 0 0 / 10px 10px,
+    rgba(255, 208, 136, 0.22);
+  animation: deskFloatY 8s ease-in-out infinite;
+}
+
+.desk-page .desk-intro-shell::after {
+  width: 170px;
+  height: 170px;
+  right: -42px;
+  top: -30px;
+  border: 2px solid rgba(255, 168, 73, 0.3);
+  box-shadow: inset 0 0 0 16px rgba(255, 214, 149, 0.16);
+  animation: deskSpin 22s linear infinite;
+}
+
+.desk-page .desk-intro-minimal h1 {
+  margin: 14px auto 12px;
+  max-width: 900px;
+  color: var(--desk-heading);
+  font-size: clamp(36px, 5.6vw, 72px);
+  line-height: 1.08;
+}
+
+.desk-page .desk-intro-minimal p {
+  margin: 0 auto;
+  max-width: 760px;
+  color: rgba(42, 27, 13, 0.72);
+  font-size: clamp(16px, 1.9vw, 22px);
+  line-height: 1.66;
+}
+
+/*--------------------------------------------------------------
+# Message Section
+--------------------------------------------------------------*/
+.desk-page .desk-message {
+  position: relative;
+  padding: 0 0 84px;
+  background: var(--desk-bg);
+}
+
+.desk-page .desk-message-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid var(--desk-border);
+  background:
+    radial-gradient(circle at 12% 22%, rgba(255, 196, 118, 0.2) 0%, rgba(255, 196, 118, 0) 38%),
+    radial-gradient(circle at 88% 86%, rgba(255, 130, 16, 0.12) 0%, rgba(255, 130, 16, 0) 44%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 246, 229, 0.78) 100%);
+  box-shadow: 0 24px 42px rgba(64, 31, 4, 0.1);
+  padding: clamp(14px, 3vw, 34px);
+}
+
+.desk-page .desk-message-shell::before {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  right: -54px;
+  bottom: -54px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 35%, rgba(255, 235, 202, 0.8) 0%, rgba(255, 162, 56, 0.26) 64%, rgba(255, 162, 56, 0) 100%);
+  pointer-events: none;
+}
+
+.desk-page .desk-portrait-wrap {
+  position: relative;
+  margin: 0;
+}
+
+.desk-page .desk-portrait-shape {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 999px;
+}
+
+.desk-page .desk-portrait-shape.shape-a {
+  width: 132px;
+  height: 132px;
+  left: -18px;
+  top: -20px;
+  border: 2px solid rgba(255, 171, 73, 0.38);
+  box-shadow: inset 0 0 0 14px rgba(255, 217, 154, 0.16);
+  animation: deskSpin 20s linear infinite;
+}
+
+.desk-page .desk-portrait-shape.shape-b {
+  width: 88px;
+  height: 88px;
+  right: -8px;
+  bottom: 68px;
+  background:
+    radial-gradient(circle, rgba(255, 145, 27, 0.84) 2px, transparent 3px) 0 0 / 10px 10px,
+    rgba(255, 209, 138, 0.22);
+  animation: deskFloatY 7.6s ease-in-out infinite;
+}
+
+.desk-page .desk-portrait {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 170, 72, 0.4);
+  background: #fff;
+  box-shadow: 0 20px 34px rgba(64, 31, 4, 0.14);
+}
+
+.desk-page .desk-portrait::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17, 9, 2, 0) 54%, rgba(17, 9, 2, 0.34) 100%);
+  pointer-events: none;
+}
+
+.desk-page .desk-portrait img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 420ms ease;
+}
+
+.desk-page .desk-portrait:hover img {
+  transform: scale(1.05);
+}
+
+.desk-page .desk-nameplate {
+  margin-top: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 170, 72, 0.38);
+  background: rgba(255, 250, 241, 0.9);
+  padding: 10px 12px;
+  box-shadow: 0 12px 20px rgba(64, 31, 4, 0.09);
+}
+
+.desk-page .desk-nameplate strong {
+  display: block;
+  color: #4e2808;
+  font-size: clamp(18px, 2.4vw, 28px);
+  line-height: 1.25;
+}
+
+.desk-page .desk-nameplate span {
+  display: block;
+  margin-top: 4px;
+  color: rgba(78, 40, 8, 0.74);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+}
+
+.desk-page .desk-message-card {
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 171, 73, 0.34);
+  background: var(--desk-surface-strong);
+  box-shadow: 0 18px 32px rgba(64, 31, 4, 0.12);
+  padding: clamp(16px, 2.4vw, 32px);
+}
+
+.desk-page .desk-message-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  border-radius: 22px 22px 0 0;
+  background: var(--desk-grad-main);
+}
+
+.desk-page .desk-message-card h2 {
+  margin: 14px 0 10px;
+  color: var(--desk-heading);
+  font-size: clamp(30px, 3.5vw, 46px);
+  line-height: 1.14;
+}
+
+.desk-page .desk-quote {
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 173, 85, 0.4);
+  background: var(--desk-grad-soft);
+}
+
+.desk-page .desk-quote p {
+  margin: 0;
+  color: #532a09;
+  font-size: clamp(17px, 2.2vw, 24px);
+  line-height: 1.45;
+}
+
+.desk-page .desk-quote footer {
+  margin-top: 8px;
+  color: rgba(83, 42, 9, 0.76);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.desk-page .desk-message-card .greeting {
+  margin: 0 0 8px;
+  color: #4c2608;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.desk-page .desk-message-card p {
+  margin: 0;
+  color: rgba(42, 27, 13, 0.82);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.desk-page .desk-message-card p + p {
+  margin-top: 10px;
+}
+
+.desk-page .desk-message-card .desk-signoff {
+  margin-top: 14px;
+  padding: 12px 14px 0;
+  border-top: 1px dashed rgba(255, 173, 85, 0.44);
+  color: #5a310f;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+@media (max-width: 1199px) {
+  .desk-page .desk-portrait img {
+    height: 540px;
+  }
+}
+
+@media (max-width: 991px) {
+  .desk-page .desk-intro {
+    padding: 58px 0 36px;
+  }
+
+  .desk-page .desk-intro-minimal h1 {
+    font-size: clamp(32px, 7vw, 54px);
+  }
+
+  .desk-page .desk-intro-minimal p {
+    font-size: 17px;
+  }
+
+  .desk-page .desk-message {
+    padding: 0 0 66px;
+  }
+
+  .desk-page .desk-portrait img {
+    height: 460px;
+  }
+
+  .desk-page .desk-nameplate strong {
+    font-size: clamp(18px, 4vw, 26px);
+  }
+}
+
+@media (max-width: 767px) {
+  .desk-page .desk-intro {
+    padding: 48px 0 26px;
+  }
+
+  .desk-page .desk-intro-shell {
+    border-radius: 16px;
+    padding: 12px;
+  }
+
+  .desk-page .desk-intro-shell::before {
+    width: 90px;
+    height: 90px;
+    left: -8px;
+    bottom: -10px;
+  }
+
+  .desk-page .desk-intro-shell::after {
+    width: 116px;
+    height: 116px;
+    right: -22px;
+    top: -18px;
+    border-width: 1.5px;
+  }
+
+  .desk-page .desk-intro-minimal h1 {
+    font-size: clamp(30px, 10vw, 44px);
+    margin: 10px 0 8px;
+  }
+
+  .desk-page .desk-intro-minimal p {
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  .desk-page .desk-message-shell,
+  .desk-page .desk-message-card {
+    border-radius: 16px;
+    padding: 12px;
+  }
+
+  .desk-page .desk-portrait {
+    border-radius: 14px;
+  }
+
+  .desk-page .desk-portrait img {
+    height: 360px;
+  }
+
+  .desk-page .desk-portrait-shape.shape-a {
+    width: 96px;
+    height: 96px;
+    left: -8px;
+    top: -10px;
+    border-width: 1.5px;
+  }
+
+  .desk-page .desk-portrait-shape.shape-b {
+    width: 66px;
+    height: 66px;
+    right: -4px;
+    bottom: 54px;
+  }
+
+  .desk-page .desk-nameplate {
+    border-radius: 10px;
+    padding: 8px 10px;
+  }
+
+  .desk-page .desk-nameplate strong {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+
+  .desk-page .desk-nameplate span {
+    font-size: 12px;
+  }
+
+  .desk-page .desk-message-card h2 {
+    font-size: clamp(24px, 8vw, 34px);
+    margin: 10px 0 8px;
+  }
+
+  .desk-page .desk-quote {
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .desk-page .desk-quote p {
+    font-size: 15.5px;
+  }
+
+  .desk-page .desk-quote footer {
+    font-size: 12px;
+  }
+
+  .desk-page .desk-message-card .greeting {
+    font-size: 17px;
+  }
+
+  .desk-page .desk-message-card p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}
+
+@keyframes deskFloatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes deskSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .desk-page *,
+  .desk-page *::before,
+  .desk-page *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}
